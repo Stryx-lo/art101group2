@@ -1,0 +1,17 @@
+/* This is for the homepage button links */
+.button {
+    color: black;
+    font-size: 24px;
+  
+    background-color: #b782a1; /* makes it the same color as the div */
+    border-width: 3px; /* gives it a nice bold border */
+    border-color: black; /* makes sure that border is black */
+    padding: 10px; /* adds some spacing between the edges of my content inside */ 
+    margin: 5px; /* adds space outside edge of box */
+  
+      font-family:"Times New Roman", Times, serif   /* changes button's font family*/ 
+  }
+  
+  .button:hover {
+  background-color:#59324c;	/** Changes bg color whenever mouse pointer enters area occupied by this widget/button**/
+  }
