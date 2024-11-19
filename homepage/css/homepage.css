@@ -5,7 +5,7 @@ body {
 }
 
 /* Buttons*/
-    .button {
+    .lets-play-button {
         position: absolute; /* Enables manual placement */
         top: 10px; /* Distance from the top of the page */
         right: 10px; /* Distance from the right edge of the page */
@@ -21,6 +21,6 @@ body {
         cursor: pointer; /* Pointer cursor on hover */
     }
 
-    .button:hover {
+    .lets-play-button:hover {
         background-color: #a4a851; /* Change background color on hover */
     }
