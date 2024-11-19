@@ -41,7 +41,7 @@ h1 {
     color: black;
     font-size: 18px;
     background-color: #dbdea3; /* Button background */
-    border: 3px solid black; /* Border styling */
+    border: 2px solid black; /* Border styling */
     padding: 4px 6px; /* Spacing inside the button */
     font-family: "Times New Roman", Times, serif; /* Font family */
     text-align: center; /* Center the text inside the button */
