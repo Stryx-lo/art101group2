@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- This title is used for tabs and bookmarks -->
-	<title>Homepage</title>
+  <head>
+	  <!-- This title is used for tabs and bookmarks -->
+	  <title>Homepage</title>
 
+    <!--this encodes the visible characters on the webpage-->
     <meta charset="UTF-8" />
+ 
+    <!--this adjust the framing depending on device type-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
+    <!--this links to the sitewide CSS sheet-->
     <link rel="stylesheet" type="text/css" href="../site-wide-files/homepage.css">
+    <!--this links to the homepage CSS sheet, which will override the sitewide CSS-->
+    <link rel="stylesheet" type="text/css" href="./homepage.css">
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="./site-wide-files/homepage.js" DEFER></script>
+    <!--This script imports the jQuery library-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!--This script imports the hompage JS file-->
+    <script src="./homepage.js" DEFER></script>
+  </head>
 
-</head>
-<body>
-<h1>Rescue</h1>
-<!--this is the button that takes users to the play page:-->
-<a href="../art101group2/play/play.html"><button type="button">Let's Play!</button></a>
-</body>
+  <body>
+    <h1>Rescue</h1>
+    <!--this is the button that takes users to the play-page:-->
+    <a href="../art101group2/play/play.html"><button type="button">Let's Play!</button></a>
+  </body>
 </html>
