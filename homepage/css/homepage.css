@@ -36,7 +36,7 @@ h1 {
 .start-over-button {
     position: absolute; /* Enables manual placement */
     top: 10px; /* Distance from the top of the page */
-    left: 10px; /* Distance from the left edge of the page */
+    right: 10px; /* Distance from the left edge of the page */
     
     color: black;
     font-size: 18px;
