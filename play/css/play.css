@@ -4,23 +4,28 @@ body {
     height: 100vh; /* Full height of the viewport */
 }
 
-/* Position the button in the top-left corner */
-.button {
-    position: absolute; /* Enables manual placement */
-    top: 10px; /* Distance from the top of the page */
-    left: 10px; /* Distance from the right edge of the page */
+/* Buttons*/
+    .button {
+        position: absolute; /* Enables manual placement */
+        top: 10px; /* Distance from the top of the page */
+        left: 10px; /* Distance from the right edge of the page */
     
-    color: black;
-    font-size: 24px;
-    background-color: #dbdea3; /* Button background */
-    border: 3px solid black; /* Border styling */
-    padding: 10px; /* Spacing inside the button */
-    font-family: "Times New Roman", Times, serif; /* Font family */
-    text-align: center; /* Center the text inside the button */
-    text-decoration: none; /* Removes underline for <a> */
-    cursor: pointer; /* Pointer cursor on hover */
-}
+        color: black;
+        font-size: 24px;
+        background-color: #dbdea3; /* Button background */
+        border: 3px solid black; /* Border styling */
+        padding: 10px; /* Spacing inside the button */
+        font-family: "Times New Roman", Times, serif; /* Font family */
+        text-align: center; /* Center the text inside the button */
+        text-decoration: none; /* Removes underline for <a> */
+        cursor: pointer; /* Pointer cursor on hover */
+    }
 
-.button:hover {
-    background-color: #a4a851; /* Change background color on hover */
-}
+    .button:hover {
+        background-color: #a4a851; /* Change background color on hover */
+    }
+    
+/* Heading text */
+    h1 {
+        text-align: center; /* Centers the text horizontally */
+    }
