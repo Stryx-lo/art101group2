@@ -39,10 +39,10 @@ h1 {
     left: 10px; /* Distance from the left edge of the page */
     
     color: black;
-    font-size: 18px;
-    background-color: #f5a623; /* Button background */
+    font-size: 12px;
+    background-color: #dbdea3; /* Button background */
     border: 3px solid black; /* Border styling */
-    padding: 8px 12px; /* Spacing inside the button */
+    padding: 4px 6px; /* Spacing inside the button */
     font-family: "Times New Roman", Times, serif; /* Font family */
     text-align: center; /* Center the text inside the button */
     text-decoration: none; /* Removes underline for <a> */
@@ -50,5 +50,5 @@ h1 {
 }
 
 .start-over-button:hover {
-    background-color: #d4881d; /* Change background color on hover */
+    background-color: #a4a851; /* Change background color on hover */
 }
