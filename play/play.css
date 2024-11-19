@@ -1,0 +1,21 @@
+/* Position the button in the top-right corner */
+.button {
+    position: absolute; /* Enables manual placement */
+    top: 10px; /* Distance from the top of the page */
+    right: 10px; /* Distance from the right edge of the page */
+    
+    color: black;
+    font-size: 24px;
+    background-color: #dbdea3; /* Same color as the div */
+    border: 3px solid black; /* Combine border-width and color */
+    padding: 10px; /* Spacing inside the button */
+    margin: 0; /* Remove extra margin for precise positioning */
+    font-family: "Times New Roman", Times, serif; /* Font family */
+    text-align: center; /* Center the text inside the button */
+    text-decoration: none; /* Removes underline (if used with <a>) */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.button:hover {
+    background-color: #a4a851; /* Change background color on hover */
+}

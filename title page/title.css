@@ -11,7 +11,7 @@ body {
 .button {
     color: black;
     font-size: 48px;
-    background-color: #b782a1;
+    background-color: #dbdea3;
     border: 3px solid black;
     padding: 10px 20px;
     margin: 5px;
@@ -22,5 +22,5 @@ body {
 }
 
 .button:hover {
-    background-color: #59324c; /* Change background color on hover */
+    background-color: #a4a851; /* Change background color on hover */
 }
