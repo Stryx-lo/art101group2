@@ -1,26 +1,54 @@
-/* ensures the body spans the full visible area of the page(viewport) */
+/* ensures the body spans the full visible area of the page (viewport) */
 body {
-    margin: 0; /* removes te default margins */
+    margin: 0; /* removes the default margins */
     height: 100vh; /* Full height of the viewport */
+    display: flex; /* Flexbox layout for easy centering */
+    flex-direction: column; /* this stacks the items vertically */
+    justify-content: center; /* this vertically centersthe content */
+    align-items: center; /* Horizontally center content */
 }
 
-/* Buttons*/
-    .lets-play-button {
-        position: absolute; /* Enables manual placement */
-        top: 10px; /* Distance from the top of the page */
-        right: 10px; /* Distance from the right edge of the page */
-    
-        color: black;
-        font-size: 24px;
-        background-color: #dbdea3; /* Button background */
-        border: 3px solid black; /* Border styling */
-        padding: 10px; /* Spacing inside the button */
-        font-family: "Times New Roman", Times, serif; /* Font family */
-        text-align: center; /* Center the text inside the button */
-        text-decoration: none; /* Removes underline for <a> */
-        cursor: pointer; /* Pointer cursor on hover */
-    }
+/* Heading */
+h1 {
+    font-size: 48px; /* feel free to change thsi! */
+    font-family: "Times New Roman", Times, serif; /* Font family (feel free to change!) */
+    margin-bottom: 20px; /* adds some space below the heading */
+}
 
-    .lets-play-button:hover {
-        background-color: #a4a851; /* Change background color on hover */
-    }
+/* Style for the "Let's Play!" BUTTON */
+.lets-play-button {
+    color: black;
+    font-size: 24px;
+    background-color: #dbdea3; /* Button background */
+    border: 3px solid black; /* Border styling */
+    padding: 10px; /* Spacing inside the button */
+    font-family: "Times New Roman", Times, serif; /* Font family */
+    text-align: center; /* Center the text inside the button */
+    text-decoration: none; /* Removes underline for <a> */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.lets-play-button:hover {
+    background-color: #a4a851; /* Change background color on hover */
+}
+
+/* Style for the "Start Over" BUTTON */
+.start-over-button {
+    position: absolute; /* Enables manual placement */
+    top: 10px; /* Distance from the top of the page */
+    left: 10px; /* Distance from the left edge of the page */
+    
+    color: black;
+    font-size: 18px;
+    background-color: #f5a623; /* Button background */
+    border: 3px solid black; /* Border styling */
+    padding: 8px 12px; /* Spacing inside the button */
+    font-family: "Times New Roman", Times, serif; /* Font family */
+    text-align: center; /* Center the text inside the button */
+    text-decoration: none; /* Removes underline for <a> */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.start-over-button:hover {
+    background-color: #d4881d; /* Change background color on hover */
+}
