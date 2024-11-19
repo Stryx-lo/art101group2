@@ -1,17 +1,5 @@
-/* This is for the play page button links */
-.button {
-    color: black;
-    font-size: 24px;
-  
-    background-color: #dbdea3; /* makes it the same color as the div */
-    border-width: 3px; /* gives it a nice bold border */
-    border-color: black; /* makes sure that border is black */
-    padding: 10px; /* adds some spacing between the edges of my content inside */ 
-    margin: 5px; /* adds space outside edge of box */
-  
-      font-family:"Times New Roman", Times, serif   /* changes button's font family*/ 
-  }
-  
-  .button:hover {
-  background-color:#a4a851;	/** Changes bg color whenever mouse pointer enters area occupied by this widget/button**/
-  }
+/* we can select an html element tag, in this case "body" will apply to the whole document */
+body {
+  background-color: #c7c0f7; /* this is the color for the "body", the full background */
+  padding: 5px;
+}
