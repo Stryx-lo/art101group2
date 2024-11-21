@@ -49,3 +49,38 @@ body {
     h1 {
         text-align: center; /* Centers the text horizontally */
     }
+
+    h2{
+        text-align: center;
+    }
+
+/* Pet selection scroll */
+.scroll-container {
+    background-color: #a3a2a2;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+
+.scroll-container img {
+    padding: 10px;
+    width: 600px;
+    height: 400px;
+  }
+
+/* Pet selection button */
+.btn {
+    
+  top: 50%;
+  left: 50%;
+  transform: translate(-500%, 15%);
+    color: black;
+    font-size: 24px;
+    background-color: #dbdea3; /* Button background */
+    border: 3px solid black; /* Border styling */
+    padding: 10px; /* Spacing inside the button */
+    font-family: "Times New Roman", Times, serif; /* Font family */
+    text-align: center; /* Center the text inside the button */
+    text-decoration: none; /* Removes underline for <a> */
+    cursor: pointer; /* Pointer cursor on hover */
+}
