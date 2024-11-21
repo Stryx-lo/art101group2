@@ -84,3 +84,7 @@ body {
     text-decoration: none; /* Removes underline for <a> */
     cursor: pointer; /* Pointer cursor on hover */
 }
+
+.btn:hover {
+    background-color: #a4a851; /* Change background color on hover */
+}
