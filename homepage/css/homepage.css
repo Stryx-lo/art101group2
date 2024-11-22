@@ -21,10 +21,6 @@
 
 }
 
-#content {
-    padding: 20px;
-    display: none; /* Hidden until preloader is clicked */
-}
 
 /* ensures the body spans the full visible area of the page(viewport) */
 body {
@@ -120,14 +116,6 @@ body {
     background-color: #a4a851; /* Change background color on hover */
 }
 
-body {
-    margin: 0; /* removes the default margins */
-    height: 100vh; /* Full height of the viewport */
-    display: flex; /* Flexbox layout for easy centering */
-    flex-direction: column; /* this stacks the items vertically */
-    justify-content: center; /* this vertically centersthe content */
-    align-items: center; /* Horizontally center content */
-}
 
 /* Headings */
 h1 {

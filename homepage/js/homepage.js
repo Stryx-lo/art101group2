@@ -8,7 +8,7 @@ $(document).ready(function() {
         // Hide the preloader
         $('#preloader').fadeOut('slow', function() {
             // Show the main content
-            $('#content').fadeIn('slow');
+            $('.scroll-container').fadeIn('slow');
         });
     });
 });
