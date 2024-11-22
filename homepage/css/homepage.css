@@ -6,7 +6,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(231, 151, 239, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +20,16 @@
 
 }
 
+/* the text that displays over the image */
+#test {
+    position: absolute;
+    color: #b3b3b3;
+    top: 10;
+    justify-content: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 100px;
+    font-weight: bolder;
+}
 
 /* ensures the body spans the full visible area of the page(viewport) */
 body {
