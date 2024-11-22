@@ -30,8 +30,7 @@
 body {
     margin: 0; /* removes te default margins */
     height: 100vh; /* Full height of the viewport */
-    background-color: rgba(231, 151, 239, 0.8);
-
+    background-color: #9CDCFE;
 }
 
 /* Buttons*/
@@ -43,7 +42,8 @@ body {
         color: black;
         font-size: 18px;
         background-color: #dbdea3; /* Button background */
-        border: 2px solid black; /* Border styling */
+        border: 1px solid #c6c992; /* Border styling */
+        border-radius: 5px;
         padding: 4px 6px; /* Spacing inside the button */
         font-family: "Times New Roman", Times, serif; /* Font family */
         text-align: center; /* Center the text inside the button */
@@ -52,7 +52,7 @@ body {
     }
 
     .home-button:hover {
-        background-color: #a4a851; /* Change background color on hover */
+        background-color: #c6c992; /* Change background color on hover */
     }
 
     .start-over-button {
@@ -62,8 +62,9 @@ body {
 
         color: black;
         font-size: 18px;
-        background-color: #dbdea3;
-        border: 2px solid black;
+        background-color: #dbdea3; /* Button background */
+        border: 1px solid #c6c992; /* Border styling */
+        border-radius: 5px;
         padding: 4px 6px;
         font-family: "Times New Roman", Times, serif; /* Font family */
         text-align: center; /* Center the text inside the button */
@@ -72,7 +73,7 @@ body {
     }
 
     .start-over-button:hover {
-        background-color: #a4a851; /* Change background color on hover */
+        background-color: #c6c992; /* Change background color on hover */
     }
     
 /* Heading text */
@@ -86,7 +87,7 @@ body {
 
 /* Pet selection scroll */
 .scroll-container {
-    background-color: #a3a2a2;
+    background-color: #99C4EA;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
@@ -106,8 +107,8 @@ body {
   transform: translate(-500%, 15%);
     color: black;
     font-size: 24px;
-    background-color: #dbdea3; /* Button background */
-    border: 3px solid black; /* Border styling */
+    border: 1px solid #dce0a0; /* Border styling */
+    border-radius: 5px;
     padding: 10px; /* Spacing inside the button */
     font-family: "Times New Roman", Times, serif; /* Font family */
     text-align: center; /* Center the text inside the button */
