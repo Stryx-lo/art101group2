@@ -16,8 +16,10 @@
 
 #preloader img {
     width: 100%;
-    height: auto;
-
+    height: 100%;
+    object-fit: cover;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 /* the text that displays over the image */
@@ -46,7 +48,7 @@ body {
     
         color: black;
         font-size: 18px;
-        background-color: #dbdea3; /* Button background */
+        background-color: #eecc75; /* Button background */
         border: 1px solid #c6c992; /* Border styling */
         border-radius: 5px;
         padding: 4px 6px; /* Spacing inside the button */
@@ -105,11 +107,11 @@ body {
   }
 
 /* Pet selection button */
+/* Play button style */
 .btn {
-    
-  top: 50%;
-  left: 50%;
-  transform: translate(-500%, 15%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-500%, 15%);
     color: black;
     font-size: 24px;
     border: 1px solid #dce0a0; /* Border styling */
@@ -119,11 +121,32 @@ body {
     text-align: center; /* Center the text inside the button */
     text-decoration: none; /* Removes underline for <a> */
     cursor: pointer; /* Pointer cursor on hover */
+    background-color: #dbdea3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
 }
 
+/* Hover effect for Play button */
 .btn:hover {
     background-color: #a4a851; /* Change background color on hover */
+    transform: translate(-500%, 15%) scale(1.1); /* Slight zoom effect */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add a floating shadow */
 }
+
+/* Optional floating animation for button */
+.btn {
+    animation: float 2s infinite ease-in-out; /* Floating animation */
+}
+
+/* Keyframes for floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translate(-500%, 15%) translateY(0);
+    }
+    50% {
+        transform: translate(-500%, 15%) translateY(-10px); /* Move up slightly */
+    }
+}
+
 
 
 /* Headings */
