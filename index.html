@@ -37,19 +37,42 @@
       <h2> Pet Selection</h2>
 
       <!-- Pet selection -->
-    
 
      <div class ="scroll-container">
       <img src="./homepage/img/sadcat1.jpg" >
-        <a href="./story1/index.html"><button class="btn">Play</button> <!-- Connected first play button w/ first story -->
-      <img src="./homepage/img/saddog1.jpg" >
-        <a href="./story2/index.html"><button class="btn">Play</button> <!-- Connected second play button w/ second story -->
+        <!--<a href="./story1/index.html"> --> <button class="btn" id="storyOneBtn">Play</button> <!-- Connected first play button w/ first story -->
+        <img src="./homepage/img/saddog1.jpg" >
+        <!--<a href="./story2/index.html"> --> <button class="btn" id="storyTwoBtn">Play</button> <!-- Connected second play button w/ second story -->
       <img src="./homepage/img/sadotter1.jpg" >
-        <a href="./story3/index.html"><button class="btn">Play</button> <!-- Connected third play button w/ third story -->
+        <!-- <a href="./story3/index.html"> --> <button class="btn" id="storyThreeBtn">Play</button> <!-- Connected third play button w/ third story -->
       <img src="./img/placeholder4.jpg" >
-        <a href="./story4/index.html"><button class="btn">Play</button> <!-- Connected forth play button w/ fourth story -->
+        <!-- <a href="./story4/index.html"> --> <button class="btn" id="storyFourBtn">Play</button> <!-- Connected forth play button w/ fourth story -->
       </div>
      </div>
-    
+     
+    <div id="storyOne"> <!-- This div starts hidden using the JQuery show function -->
+      <h1>Story One</h1>
+        <p>Text here</p>
+        <button class="endbtn" id="storyOneEnd">Go Back</button> <!-- This button takes you back to the top, closes the story, and adds the "adopted" sticker to the pet photo-->
+     </div>
+
+    <div id="storyTwo"> <!-- This div starts hidden using the JQuery show function -->
+      <h1>Story Two</h1>
+        <p>Text here</p>
+        <button class="endbtn" id="storyTwoEnd">Go Back</button> <!-- This button takes you back to the top, closes the story, and adds the "adopted" sticker to the pet photo-->
+     </div>
+
+    <div id="storyThree"> <!-- This div starts hidden using the JQuery show function -->
+      <h1>Story Three</h1>
+        <p>Text here</p>
+        <button class="endbtn" id="storyThreeEnd">Go Back</button> <!-- This button takes you back to the top, closes the story, and adds the "adopted" sticker to the pet photo-->
+     </div>
+
+     <div id="storyFour"> <!-- This div starts hidden using the JQuery show function -->
+      <h1>Story Four</h1>
+        <p>Text here</p>
+        <button class="endbtn" id="storyFourEnd">Go Back</button> <!-- This button takes you back to the top, closes the story, and adds the "adopted" sticker to the pet photo-->
+     </div>
+
   </body>
 </html>

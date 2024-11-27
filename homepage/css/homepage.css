@@ -1,5 +1,4 @@
 /* creating a preloader. */
-
 #preloader {
     position: fixed;
     top: 0;
@@ -13,7 +12,6 @@
 }
 
 /* image inside the preloader */
-
 #preloader img {
     width: 100%;
     height: 100%;
@@ -192,4 +190,50 @@ h1 {
 
 .start-over-button:hover {
     background-color: #a4a851; /* Change background color on hover */
+}
+
+/* Style for hiding and showing the stories */
+#storyOne { 
+    border: 1px solid black; 
+    padding-top: 40px; 
+    height: 140px; 
+    background: rgb(71, 113, 237); 
+    display: none; 
+} 
+
+#storyTwo { 
+    border: 1px solid black; 
+    padding-top: 40px; 
+    height: 140px; 
+    background: rgb(71, 113, 237); 
+    display: none; 
+} 
+
+#storyThree { 
+    border: 1px solid black; 
+    padding-top: 40px; 
+    height: 140px; 
+    background: rgb(71, 113, 237); 
+    display: none; 
+} 
+
+#storyFour { 
+    border: 1px solid black; 
+    padding-top: 40px; 
+    height: 140px; 
+    background: rgb(71, 113, 237); 
+    display: none; 
+} 
+
+.endbtn {
+    color: black;
+    font-size: 24px;
+    border: 1px solid #dce0a0; /* Border styling */
+    border-radius: 5px;
+    padding: 10px; /* Spacing inside the button */
+    font-family: "Times New Roman", Times, serif; /* Font family */
+    text-align: center; /* Center the text inside the button */
+    text-decoration: none; /* Removes underline for <a> */
+    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #dbdea3;
 }
