@@ -71,12 +71,31 @@ body {
         text-align: center;
     }
 
+/* Make sure the buttons are positioned correctly and are on top of the images */
+.pet-selection-group {
+    position: relative; /* Allows positioning of the button inside the group */
+    display: inline-block; /* Keep items in a row */
+    margin: 10px; /* Optional spacing */
+    z-index: 10; /* Ensures the button is above the image */
+}
+
+/* Pet selection image styling */
+.pet-selection-group img {
+    width: 600px;
+    height: 400px;
+    display: block;
+    z-index: 1; /* Makes sure the image is beneath the button */
+}
+
 /* Pet selection scroll */
 .scroll-container {
     background-color: #99C4EA;
+    border: 1px solid black;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
   }
 
 .scroll-container img {
@@ -87,8 +106,20 @@ body {
 
   /* Button Styles */
 
-/* Play button style */
-.btn, .endbtn {
+  #main-content {
+    display: none; /* Hide content initially */
+}
+
+#preloader {
+    display: block; /* Show preloader by default */
+}
+
+#reset {
+    position: absolute;
+    top: 20px; /* Adjust vertical position */
+    left: 10%; /* Center horizontally */
+    transform: translateX(-50%); /* Centering adjustment */
+    z-index: 1000; /* Ensure it's on top of other content */
     color: black;
     font-size: 24px;
     font-family: "Times New Roman", Times, serif;
@@ -100,9 +131,55 @@ body {
     background-color: #dbdea3;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+/* Reset button hover */
+#reset:hover {
+    background-color: #a4a851;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
 
-/* Hover Effect */
-.btn:hover, .endbtn:hover {
+/* "Play" button style */
+.btn {
+    color: black;
+    font-size: 24px;
+    font-family: "Times New Roman", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dbdea3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute; /* Absolute positioning for each button */
+    bottom: 5%; /* Bottom spacing from the image */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust button to be exactly centered */
+    z-index: 10; /* Ensure it's on top of the image */
+}
+
+/* "Play" button hover effect */
+.btn:hover {
+    background-color: #a4a851;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* "Clear" button style */
+.endbtn {
+    color: black;
+    font-size: 24px;
+    font-family: "Times New Roman", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dbdea3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+/* "Clear" button hover Effect */
+.endbtn:hover {
     background-color: #a4a851;
     transform: scale(1.1);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
@@ -130,4 +207,6 @@ body {
     height: 140px;
     background: rgb(71, 113, 237);
     display: none;
+    margin: 10px;
+    border-radius: 5px;
 }

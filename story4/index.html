@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to our Website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="../site-wide-files/css/sitewide.css">
+    <link rel="stylesheet" type="text/css" href="./homepage/css/homepage.css">
+
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../art101group2/homepage/js/homepage.js" defer></script>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <img src="./homepage/img/shelter.png">
+      <div id="title-text">
+        <p>Welcome to our <br> adoption center!</p>
+      </div>
+      <div id="door-wrapper">
+        <img id="door-image" src="./homepage/img/closeddoors.png" alt="Closed Door">
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <h1>Let's Play!</h1>
+    <h2>Pet Selection</h2>
+    <div class="scroll-container">
+      <img src="./homepage/img/sadcat1.jpg">
+      <button class="btn" id="storyOneBtn">Play</button>
+
+      <img src="./homepage/img/saddog1.jpg">
+      <button class="btn" id="storyTwoBtn">Play</button>
+
+      <img src="./homepage/img/sadotter1.jpg">
+      <button class="btn" id="storyThreeBtn">Play</button>
+
+      <img src="./img/placeholder4.jpg">
+      <button class="btn" id="storyFourBtn">Play</button>
+    </div>
+
+    <!-- Story Containers -->
+    <div id="storyOne" class="story">
+      <h1>Story One</h1>
+      <p>Text here</p>
+      <button class="endbtn">Clear</button>
+    </div>
+
+    <div id="storyTwo" class="story">
+      <h1>Story Two</h1>
+      <p>Text here</p>
+      <button class="endbtn">Clear</button>
+    </div>
+
+    <div id="storyThree" class="story">
+      <h1>Story Three</h1>
+      <p>Text here</p>
+      <button class="endbtn">Clear</button>
+    </div>
+
+    <div id="storyFour" class="story">
+      <h1>Story Four</h1>
+      <p>Text here</p>
+      <button class="endbtn">Clear</button>
+    </div>
+  </body>
+</html>

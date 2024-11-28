@@ -26,7 +26,7 @@ $(document).ready(function () {
       $(storyId).fadeIn('swing');
     }
   
-    // Button click handlers
+    // Button click handlers for stories
     $('#storyOneBtn').click(() => showStory('#storyOne'));
     $('#storyTwoBtn').click(() => showStory('#storyTwo'));
     $('#storyThreeBtn').click(() => showStory('#storyThree'));
@@ -34,5 +34,18 @@ $(document).ready(function () {
   
     // Clear button handler
     $('.endbtn').click(() => $('.story').hide());
+  
+// Restart button functionality (reset the page)
+$('#reset').click(function() {
+    // Hide all stories
+    $('.story').hide();
+    
+    // Hide the pet selection screen
+    $('.scroll-container').fadeOut('slow', function() {
+      // Show the preloader again
+      $('#preloader').fadeIn('slow');
+    });
+  });
+  
   });
   

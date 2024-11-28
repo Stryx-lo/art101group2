@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../art101group2/homepage/js/homepage.js" defer></script>
   </head>
+
   <body>
     <!-- Preloader -->
     <div id="preloader">
@@ -26,45 +27,61 @@
     </div>
 
     <!-- Main Content -->
-    <h1>Let's Play!</h1>
-    <h2>Pet Selection</h2>
-    <div class="scroll-container">
-      <img src="./homepage/img/sadcat1.jpg">
-      <button class="btn" id="storyOneBtn">Play</button>
 
-      <img src="./homepage/img/saddog1.jpg">
-      <button class="btn" id="storyTwoBtn">Play</button>
+ <!-- Button to reset -->
+  <button id="reset">Restart</button>
 
-      <img src="./homepage/img/sadotter1.jpg">
-      <button class="btn" id="storyThreeBtn">Play</button>
+<!-- Text and Images -->
+  <h1>Let's Play!</h1>
+  <h2>Pet Selection</h2>
+  
+  <!-- Scroll Container for Pet Selection -->
+<div class="scroll-container">
+  <!-- Pet selection groups -->
+  <div class="pet-selection-group">
+    <img src="./homepage/img/opendoors.png">
+  </div>
+  <div class="pet-selection-group">
+    <img src="./homepage/img/sadcat1.jpg">
+    <button class="btn" id="storyOneBtn">Learn More</button>
+  </div>
+  <div class="pet-selection-group">
+    <img src="./homepage/img/saddog1.jpg">
+    <button class="btn" id="storyTwoBtn">Learn More</button>
+  </div>
+  <div class="pet-selection-group">
+    <img src="./homepage/img/sadotter1.jpg">
+    <button class="btn" id="storyThreeBtn">Learn More</button>
+  </div>
+  <div class="pet-selection-group">
+    <img src="./homepage/img/opendoors.png">
+    <button class="btn" id="storyFourBtn">Learn More</button>
+  </div>
+</div>
 
-      <img src="./img/placeholder4.jpg">
-      <button class="btn" id="storyFourBtn">Play</button>
-    </div>
+<!-- Story Containers -->
+  <div id="storyOne" class="story">
+    <h1>Story One</h1>
+    <p>Text here</p>
+    <button class="endbtn">Clear</button>
+  </div>
 
-    <!-- Story Containers -->
-    <div id="storyOne" class="story">
-      <h1>Story One</h1>
-      <p>Text here</p>
-      <button class="endbtn">Clear</button>
-    </div>
+  <div id="storyTwo" class="story">
+    <h1>Story Two</h1>
+    <p>Text here</p>
+    <button class="endbtn">Clear</button>
+  </div>
 
-    <div id="storyTwo" class="story">
-      <h1>Story Two</h1>
-      <p>Text here</p>
-      <button class="endbtn">Clear</button>
-    </div>
+  <div id="storyThree" class="story">
+    <h1>Story Three</h1>
+    <p>Text here</p>
+    <button class="endbtn">Clear</button>
+  </div>
 
-    <div id="storyThree" class="story">
-      <h1>Story Three</h1>
-      <p>Text here</p>
-      <button class="endbtn">Clear</button>
-    </div>
-
-    <div id="storyFour" class="story">
-      <h1>Story Four</h1>
-      <p>Text here</p>
-      <button class="endbtn">Clear</button>
-    </div>
-  </body>
+  <div id="storyFour" class="story">
+    <h1>Story Four</h1>
+    <p>Text here</p>
+    <button class="endbtn">Clear</button>
+  </div>
+</body>
 </html>
