@@ -1,78 +1,70 @@
 <!DOCTYPE html>
 <html>
   <head>
-	  <!-- This title is used for tabs and bookmarks -->
-	  <title>Welcome to our Website </title>
-
-    <!-- this encodes the visible characters on the webpage -->
+    <title>Welcome to our Website</title>
     <meta charset="UTF-8" />
- 
-    <!-- this adjusts the framing depending on device type -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-    <!-- this links to the sitewide CSS sheet -->
+
+    <!-- External CSS -->
     <link rel="stylesheet" type="text/css" href="../site-wide-files/css/sitewide.css">
-    <!-- this links to the homepage CSS sheet, which will override the sitewide CSS -->
     <link rel="stylesheet" type="text/css" href="./homepage/css/homepage.css">
 
-    <!-- This script imports the jQuery library -->
+    <!-- jQuery Library -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-    <!-- This script imports the homepage JS file -->
     <script src="../art101group2/homepage/js/homepage.js" defer></script>
   </head>
-
   <body>
-    
-    <!-- preloader, basically the start screen with the pet store. -->
-    <div id="preloader"> 
-        <img src="./homepage/img/adoptioncenterexample.jpg" >
-      <div id="test">
-        <p> Welcome to our <br> adoption center! </p> 
+    <!-- Preloader -->
+    <div id="preloader">
+      <img src="./homepage/img/shelter.png">
+      <div id="title-text">
+        <p>Welcome to our <br> adoption center!</p>
       </div>
-    </div> 
-
-    <!-- main content of the website -->
-      <h1>Let's Play!</h1>
-      <h2> Pet Selection</h2>
-
-      <!-- Pet selection -->
-
-     <div class ="scroll-container">
-      <img src="./homepage/img/sadcat1.jpg" >
-        <!--<a href="./story1/index.html"> --> <button class="btn" id="storyOneBtn">Play</button> <!-- Connected first play button w/ first story -->
-        <img src="./homepage/img/saddog1.jpg" >
-        <!--<a href="./story2/index.html"> --> <button class="btn" id="storyTwoBtn">Play</button> <!-- Connected second play button w/ second story -->
-      <img src="./homepage/img/sadotter1.jpg" >
-        <!-- <a href="./story3/index.html"> --> <button class="btn" id="storyThreeBtn">Play</button> <!-- Connected third play button w/ third story -->
-      <img src="./img/placeholder4.jpg" >
-        <!-- <a href="./story4/index.html"> --> <button class="btn" id="storyFourBtn">Play</button> <!-- Connected forth play button w/ fourth story -->
+      <div id="door-wrapper">
+        <img id="door-image" src="./homepage/img/closeddoors.png" alt="Closed Door">
       </div>
-     </div>
-     
-    <div id="storyOne"> <!-- This div starts hidden using the JQuery show function -->
+    </div>
+
+    <!-- Main Content -->
+    <h1>Let's Play!</h1>
+    <h2>Pet Selection</h2>
+    <div class="scroll-container">
+      <img src="./homepage/img/sadcat1.jpg">
+      <button class="btn" id="storyOneBtn">Play</button>
+
+      <img src="./homepage/img/saddog1.jpg">
+      <button class="btn" id="storyTwoBtn">Play</button>
+
+      <img src="./homepage/img/sadotter1.jpg">
+      <button class="btn" id="storyThreeBtn">Play</button>
+
+      <img src="./img/placeholder4.jpg">
+      <button class="btn" id="storyFourBtn">Play</button>
+    </div>
+
+    <!-- Story Containers -->
+    <div id="storyOne" class="story">
       <h1>Story One</h1>
-        <p>Text here</p>
-        <button class="endbtn" id="storyOneEnd">Go Back</button> <!-- This button takes you back to the top, closes the story, and adds the "adopted" sticker to the pet photo-->
-     </div>
+      <p>Text here</p>
+      <button class="endbtn">Clear</button>
+    </div>
 
-    <div id="storyTwo"> <!-- This div starts hidden using the JQuery show function -->
+    <div id="storyTwo" class="story">
       <h1>Story Two</h1>
-        <p>Text here</p>
-        <button class="endbtn" id="storyTwoEnd">Go Back</button> <!-- This button takes you back to the top, closes the story, and adds the "adopted" sticker to the pet photo-->
-     </div>
+      <p>Text here</p>
+      <button class="endbtn">Clear</button>
+    </div>
 
-    <div id="storyThree"> <!-- This div starts hidden using the JQuery show function -->
+    <div id="storyThree" class="story">
       <h1>Story Three</h1>
-        <p>Text here</p>
-        <button class="endbtn" id="storyThreeEnd">Go Back</button> <!-- This button takes you back to the top, closes the story, and adds the "adopted" sticker to the pet photo-->
-     </div>
+      <p>Text here</p>
+      <button class="endbtn">Clear</button>
+    </div>
 
-     <div id="storyFour"> <!-- This div starts hidden using the JQuery show function -->
+    <div id="storyFour" class="story">
       <h1>Story Four</h1>
-        <p>Text here</p>
-        <button class="endbtn" id="storyFourEnd">Go Back</button> <!-- This button takes you back to the top, closes the story, and adds the "adopted" sticker to the pet photo-->
-     </div>
-
+      <p>Text here</p>
+      <button class="endbtn">Clear</button>
+    </div>
   </body>
 </html>
