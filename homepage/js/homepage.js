@@ -46,6 +46,5 @@ $('#reset').click(function() {
       $('#preloader').fadeIn('slow');
     });
   });
-  
-  });
-  
+
+});
