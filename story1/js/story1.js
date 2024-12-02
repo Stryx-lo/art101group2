@@ -47,3 +47,13 @@ function transform(section) {
     percentage = percentage < 0 ? 0 : percentage > 400 ? 400 : percentage;
     scrollSection.style.transform = 'translate3d(${-([percentage])}vw, 0, 0)';
 }
+
+// Event listern for go back button
+
+
+document.getElementById('adopt').addEventListener('click', function(){
+    const animalId = this.getAttribute("animal-id");
+    if(animalId){
+        localStorage.setItem("adoptedAnimal", animalId);
+    }
+})
