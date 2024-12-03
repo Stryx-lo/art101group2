@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
 /* Preloader Container, so, background image, text and doors that will all disappear */
 #preloader {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Full width of the viewport */
-    height: 100%; /* Full height of the viewport */
+    width: 100vw; /* Ensures full width */
+    height: 100vh;/* Full height of the viewport */
     z-index: 9999; /* Ensures it is above other content */
     overflow: hidden; /* Prevents scrolling */
 }
@@ -15,7 +17,7 @@
     color: #e5e4e4;
     top: 10%; /* Adjust positioning */
     justify-content: center;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Chewy", "Comic Sans", cursive;
     font-size: 100px;
     font-weight: bolder;
     text-align: center;
@@ -60,16 +62,23 @@ body {
 }
     
 /* Heading text */
-    h1 {
-        font-size: 48px;
-        font-family: "Times New Roman", Times, serif;
-        margin-bottom: 20px; /* adds some space below the heading */
-        text-align: center; /* Centers the text horizontally */
-    }
+h1 {
+    color: #85c7f9;
+    font-size: 48px;
+    font-family: "Chewy", Times, serif;
+    margin-bottom: 20px; /* adds some space below the heading */
+    text-align: center; /* Centers the text horizontally */
+    text-shadow: 
+        -2px -2px 0 white, /* Top-left outline */
+        2px -2px 0 white,  /* Top-right outline */
+        -2px 2px 0 white,  /* Bottom-left outline */
+        2px 2px 0 white;   /* Bottom-right outline */
+}
 
-    h2{
-        text-align: center;
-    }
+h2{
+    color: white;
+    text-align: center;
+}
 
 /* Make sure the buttons are positioned correctly and are on top of the images */
 .pet-selection-group {
@@ -89,8 +98,8 @@ body {
 
 /* Pet selection scroll */
 .scroll-container {
-    background-color: #99C4EA;
-    border: 1px solid black;
+    background-color: #85c7f9;
+    border: 4px solid white;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
@@ -103,6 +112,10 @@ body {
     width: 600px;
     height: 400px;
   }
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
 
   /* Button Styles */
 
@@ -120,9 +133,9 @@ body {
     left: 10%; /* Center horizontally */
     transform: translateX(-50%); /* Centering adjustment */
     z-index: 1000; /* Ensure it's on top of other content */
-    color: black;
+    color: #da7f45;
     font-size: 24px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Chewy", Times, serif;
     border: 1px solid #dce0a0;
     border-radius: 5px;
     padding: 10px;
@@ -133,15 +146,16 @@ body {
 }
 /* Reset button hover */
 #reset:hover {
-    background-color: #a4a851;
+    background-color: #da7f45;
+    color: #dbdea3;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* "Play" button style */
 .btn {
-    color: black;
+    color: #da7f45;
     font-size: 24px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Chewy", Times, serif;
     border: 1px solid #dce0a0;
     border-radius: 5px;
     padding: 10px;
@@ -158,16 +172,17 @@ body {
 
 /* "Play" button hover effect */
 .btn:hover {
-    background-color: #a4a851;
+    background-color: #da7f45;
+    color: #dbdea3;
     transform: scale(1.1);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* "Clear" button style */
 .endbtn {
-    color: black;
+    color: #da7f45;
     font-size: 24px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Chewy", Times, serif;
     border: 1px solid #dce0a0;
     border-radius: 5px;
     padding: 10px;
@@ -180,7 +195,8 @@ body {
 
 /* "Clear" button hover Effect */
 .endbtn:hover {
-    background-color: #a4a851;
+    background-color: #da7f45;
+    color: #dbdea3;
     transform: scale(1.1);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
