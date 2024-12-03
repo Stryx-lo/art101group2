@@ -81,7 +81,7 @@ body {
 
 /* Pet selection image styling */
 .pet-selection-group img {
-    width: 600px;
+    /* width: 600px; */
     height: 400px;
     display: block;
     z-index: 1; /* Makes sure the image is beneath the button */
@@ -100,7 +100,7 @@ body {
 
 .scroll-container img {
     padding: 10px;
-    width: 600px;
+    /* width: 600px; */
     height: 400px;
   }
 
