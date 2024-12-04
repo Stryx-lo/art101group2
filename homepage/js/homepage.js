@@ -68,8 +68,6 @@ $('#reset').click(function() {
 });
 
 // Music
-
-
   $('#playMusic').click( function(){
     console.log("playing")
     myAudio.play();
