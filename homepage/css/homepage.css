@@ -242,3 +242,39 @@ h2{
     background-size: contain;
     z-index: 10;
 }
+
+#playMusic {
+    color: #da7f45;
+    font-size: 24px;
+    font-family: "Chewy", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dbdea3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute; /* Absolute positioning for each button */
+    top: 3%; /* Bottom spacing from the image */
+    right: 5%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust button to be exactly centered */
+    z-index: 10; /* Ensure it's on top of the image */
+}
+
+#stopMusic {
+    color: #da7f45;
+    font-size: 24px;
+    font-family: "Chewy", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dbdea3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute; /* Absolute positioning for each button */
+    top: 3%; /* Bottom spacing from the image */
+    right: 5%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust button to be exactly centered */
+    z-index: 10; /* Ensure it's on top of the image */
+}

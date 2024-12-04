@@ -66,3 +66,27 @@ $('#reset').click(function() {
   });
 
 });
+
+// Music
+
+
+  $('#playMusic').click( function(){
+    console.log("playing")
+    myAudio.play();
+    
+    $('#stopMusic').show();
+    $('#playMusic').hide();
+
+  });
+
+  $('#stopMusic').click( function(){
+    console.log("stopping")
+   
+    myAudio.pause();
+
+    $('#playMusic').show();
+    $('#stopMusic').hide();
+
+  });
+ 
+ 
