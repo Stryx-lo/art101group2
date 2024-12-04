@@ -167,7 +167,7 @@ h2{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: absolute; /* Absolute positioning for each button */
     bottom: 5%; /* Bottom spacing from the image */
-    left: 50%; /* Center horizontally */
+    left: 60%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust button to be exactly centered */
     z-index: 10; /* Ensure it's on top of the image */
 }
