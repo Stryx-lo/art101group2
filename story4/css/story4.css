@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
 /* Preloader Container, so, background image, text and doors that will all disappear */
 #preloader {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Full width of the viewport */
-    height: 100%; /* Full height of the viewport */
+    width: 100vw; /* Ensures full width */
+    height: 100vh;/* Full height of the viewport */
     z-index: 9999; /* Ensures it is above other content */
     overflow: hidden; /* Prevents scrolling */
 }
@@ -15,7 +18,7 @@
     color: #e5e4e4;
     top: 10%; /* Adjust positioning */
     justify-content: center;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Chewy", "Comic Sans", cursive;
     font-size: 100px;
     font-weight: bolder;
     text-align: center;
@@ -60,51 +63,84 @@ body {
 }
     
 /* Heading text */
-    h1 {
-        font-size: 48px;
-        font-family: "Times New Roman", Times, serif;
-        margin-bottom: 20px; /* adds some space below the heading */
-        text-align: center; /* Centers the text horizontally */
-    }
-
-    h2{
-        text-align: center;
-    }
-
-/* Make sure the buttons are positioned correctly and are on top of the images */
-.pet-selection-group {
-    position: relative; /* Allows positioning of the button inside the group */
-    display: inline-block; /* Keep items in a row */
-    margin: 10px; /* Optional spacing */
-    z-index: 10; /* Ensures the button is above the image */
+h1 {
+    color: #85c7f9;
+    font-size: 48px;
+    font-family: "Chewy", Times, serif;
+    margin-bottom: 20px; /* adds some space below the heading */
+    text-align: center; /* Centers the text horizontally */
+    text-shadow: 
+        -2px -2px 0 white, /* Top-left outline */
+        2px -2px 0 white,  /* Top-right outline */
+        -2px 2px 0 white,  /* Bottom-left outline */
+        2px 2px 0 white;   /* Bottom-right outline */
 }
 
-/* Pet selection image styling */
-.pet-selection-group img {
-    width: 600px;
-    height: 400px;
-    display: block;
-    z-index: 1; /* Makes sure the image is beneath the button */
+h2{
+    color: white;
+    font-family: "DynaPuff";
+    text-align: center;
 }
 
-/* Pet selection scroll */
+/* Scroll container: horizontal scrolling */
 .scroll-container {
-    background-color: #99C4EA;
-    border: 1px solid black;
-    overflow: auto;
+    display: flex; /* Arrange child containers in a row */
+    background-color: #85c7f9;
+    border: 4px solid white;
+    overflow-x: auto; /* Allow horizontal scrolling */
     white-space: nowrap;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
-  }
+}
 
-.scroll-container img {
-    padding: 10px;
-    width: 600px;
-    height: 400px;
-  }
+.scroll-container::-webkit-scrollbar {
+    display: none;
 
-  /* Button Styles */
+}
+
+/* Each individual pet container */
+.pet-container {
+    position: relative; /* To position the button relative to the image */
+    display: inline-block; /* Keep images and buttons inline */
+    margin: 10px; /* Space between containers */
+    text-align: center; /* Center-align content inside each container */
+}
+
+/* Images inside pet containers */
+.pet-container img {
+    width: 100%; /* Image fits container width */
+    height: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below images */
+    z-index: 1; /* Keeps image below the button */
+}
+
+/* Buttons inside pet containers */
+.pet-container .pet-button {
+    position: absolute; /* Position the button relative to the container */
+    bottom: 10px; /* Adjust button placement */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%); /* Align button exactly in the center */
+    z-index: 10; /* Ensure button is on top of the image */
+    color: #da7f45;
+    font-size: 20px;
+    font-family: "Chewy", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: #dbdea3;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover effect */
+.pet-container .pet-button:hover {
+    background-color: #da7f45;
+    color: #dbdea3;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
 
   #main-content {
     display: none; /* Hide content initially */
@@ -114,15 +150,15 @@ body {
     display: block; /* Show preloader by default */
 }
 
-#reset {
+#restart {
     position: absolute;
     top: 20px; /* Adjust vertical position */
     left: 10%; /* Center horizontally */
     transform: translateX(-50%); /* Centering adjustment */
     z-index: 1000; /* Ensure it's on top of other content */
-    color: black;
+    color: #da7f45;
     font-size: 24px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Chewy", Times, serif;
     border: 1px solid #dce0a0;
     border-radius: 5px;
     padding: 10px;
@@ -132,42 +168,17 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 /* Reset button hover */
-#reset:hover {
-    background-color: #a4a851;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* "Play" button style */
-.btn {
-    color: black;
-    font-size: 24px;
-    font-family: "Times New Roman", Times, serif;
-    border: 1px solid #dce0a0;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    background-color: #dbdea3;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: absolute; /* Absolute positioning for each button */
-    bottom: 5%; /* Bottom spacing from the image */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust button to be exactly centered */
-    z-index: 10; /* Ensure it's on top of the image */
-}
-
-/* "Play" button hover effect */
-.btn:hover {
-    background-color: #a4a851;
-    transform: scale(1.1);
+#restart:hover {
+    background-color: #da7f45;
+    color: #dbdea3;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* "Clear" button style */
-.endbtn {
-    color: black;
+.clearbtn {
+    color: #da7f45;
     font-size: 24px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Chewy", Times, serif;
     border: 1px solid #dce0a0;
     border-radius: 5px;
     padding: 10px;
@@ -179,30 +190,18 @@ body {
 }
 
 /* "Clear" button hover Effect */
-.endbtn:hover {
-    background-color: #a4a851;
+.clearbtn:hover {
+    background-color: #da7f45;
+    color: #dbdea3;
     transform: scale(1.1);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Keyframes for floating animation */
-@keyframes float {
-    0%, 100% {
-        transform: translate(-500%, 15%) translateY(0);
-    }
-    50% {
-        transform: translate(-500%, 15%) translateY(-10px); /* Move up slightly */
-    }
-}
-
-/* Optional floating animation for button */
-.btn {
-    animation: float 2s infinite ease-in-out; /* Floating animation */
-}
-
 /* Story Containers (hidden initially) */
-#storyOne, #storyTwo, #storyThree, #storyFour {
-    border: 1px solid black;
+#storyOne, #storyTwo, #storyThree {
+    color: white;
+    font-family: "DynaPuff";
+    border: 4px solid white;
     padding-top: 40px;
     height: 140px;
     background: rgb(71, 113, 237);
@@ -211,46 +210,65 @@ body {
     border-radius: 5px;
 }
 
-/* Paw print container styling */
-.paw-animation {
+/* adopt sticker*/
+.adopted-sticker {
     position: absolute;
-    pointer-events: none; /* Ensure the container doesn't block any clicks */
-    z-index: 9999;
-    opacity: 0;
-    transition: opacity 0.5s ease; /* Fade in/out effect */
-    top: 0;
-    left: 0;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background: url('./img/adopted.jpg') no-repeat center center;
+    background-size: contain;
+    z-index: 10;
 }
 
-/* Paw print images styling */
-.paw {
-    width: 60px; /* Set a size for the paw prints */
-    height: auto;
+#playMusic {
+    color: #da7f45;
+    font-size: 24px;
+    font-family: "Chewy", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dbdea3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute; /* Absolute positioning for each button */
+    top: 3%; /* Bottom spacing from the image */
+    right: 5%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust button to be exactly centered */
+    z-index: 10; /* Ensure it's on top of the image */
+}
+
+#stopMusic {
+    color: #da7f45;
+    font-size: 24px;
+    font-family: "Chewy", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dbdea3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute; /* Absolute positioning for each button */
+    top: 3%; /* Bottom spacing from the image */
+    right: 5%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust button to be exactly centered */
+    z-index: 10; /* Ensure it's on top of the image */
+}
+
+#info-button {
     position: absolute;
-    top: -35px; /* Adjust the vertical offset if needed */
-    left: 0;
-    animation: rotatePaws 6s infinite; /* Animation of the paw images */
-}
+   top: 10px;
+   right: 0.5%;
+   transform: translateX(-50%);
+   z-index: 1000;
+   border: 1px solid #dce0a0;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   width: 50px;
+   height: 50px;
 
-/* Paw print images will be hidden initially */
-.paw-1, .paw-2, .paw-3 {
-    display: none;
-}
-
-/* Keyframes for rotating paw prints (appear one after the other) */
-@keyframes rotatePaws {
-    0% {
-        display: block;
-        opacity: 1;
-    }
-    33% {
-        display: none;
-    }
-    66% {
-        display: block;
-        opacity: 1;
-    }
-    100% {
-        display: none;
-    }
 }

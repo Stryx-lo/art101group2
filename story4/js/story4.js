@@ -1,15 +1,15 @@
 $(document).ready(function () {
   // Preload the open door image
   const openDoorImg = new Image();
-  openDoorImg.src = './homepage/img/opendoors.png';
+  openDoorImg.src = './img/opendoors.png';
 
   // Door hover effect
   $('#door-image').hover(
     function () {
-      $(this).attr('src', './homepage/img/opendoors.png');
+      $(this).attr('src', './img/opendoors.png');
     },
     function () {
-      $(this).attr('src', './homepage/img/closeddoors.png');
+      $(this).attr('src', './img/opendoors.png');
     }
   );
 
@@ -19,6 +19,24 @@ $(document).ready(function () {
       $('.scroll-container').fadeIn('slow');
     });
   });
+
+  //Add adopted sticker if there's an adopted animal
+  const adoptedAnimalId = localStorage.getItem('adoptedAnimal');
+  
+  if (adoptedAnimalId) {
+    // Find the animal container using the ID stored in localStorage
+    const animalContainer = document.getElementById(adoptedAnimalId);
+   
+    if (animalContainer) {
+        // Create the "Adopted" sticker
+        const sticker = document.createElement('div');
+        sticker.classList.add('adopted-sticker');  // Add class instead of inline styles
+
+        // Add the sticker to the animal container
+        animalContainer.style.position = 'relative';  // Ensure the container has positioning
+        animalContainer.appendChild(sticker);
+    }
+  }
 
   // Show specific story
   function showStory(storyId) {
@@ -30,13 +48,12 @@ $(document).ready(function () {
   $('#storyOneBtn').click(() => showStory('#storyOne'));
   $('#storyTwoBtn').click(() => showStory('#storyTwo'));
   $('#storyThreeBtn').click(() => showStory('#storyThree'));
-  $('#storyFourBtn').click(() => showStory('#storyFour'));
 
   // Clear button handler
-  $('.endbtn').click(() => $('.story').hide());
+  $('.clearbtn').click(() => $('.story').hide());
 
-// Restart button functionality (reset the page)
-$('#reset').click(function() {
+// Restart button (reset the page)
+$('#restart').click(function() {
   // Hide all stories
   $('.story').hide();
   
@@ -47,49 +64,28 @@ $('#reset').click(function() {
   });
 });
 
- // Create the paw print elements and make them follow the cursor
- let timeout;
- const pawContainer = $('#paw-animation'); // Paw container
+});
+
+// Music
+
+  $('#playMusic').show();
+  $('#stopMusic').hide();
+
+$('#playMusic').click( function(){
+  console.log("playing")
+  myAudio.play();
+  
+  $('#stopMusic').show();
+  $('#playMusic').hide();
+
+});
+
+$('#stopMusic').click( function(){
+  console.log("stopping")
  
- $(document).mousemove(function (e) {
-     // Reset the timer on every move
-     clearTimeout(timeout);
-     
-     // Reposition the paw print container next to the cursor
-     pawContainer.css({
-         top: e.pageY + 'px',
-         left: e.pageX + 'px'
-     });
-     
-     // After 2 seconds of rest, trigger the paw animation
-     timeout = setTimeout(function() {
-         // Show the paw prints animation
-         pawContainer.css('opacity', 1);
-         
-         // Start rotating through paw print images
-         rotatePaws();
-     }, 1000); // 1000 ms = 1 seconds delay
- });
+  myAudio.pause();
 
- // Function to rotate paw prints images
- function rotatePaws() {
-     const paws = $('.paw');
-     let index = 0;
-     
-     // Hide all paws initially
-     paws.hide();
-     
-     // Rotate the paw prints every 1 second
-     setInterval(function () {
-         paws.hide(); // Hide all images
-         $(paws[index]).show(); // Show the current image
-         index = (index + 1) % paws.length; // Move to next image, looping back after 3
-     }, 500); // 500 ms = 0 second for each paw print to show
- }
-
- // Hide paw prints after animation
- $(document).click(function () {
-     pawContainer.css('opacity', 0); // Hide after click
- });
+  $('#playMusic').show();
+  $('#stopMusic').hide();
 
 });
