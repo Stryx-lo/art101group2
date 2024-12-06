@@ -11,8 +11,6 @@ body {
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: var(--text-color);
-    background: var(--bg-color);
     transition: 0.3s ease-out;
     overflow-x: hidden;
     max-width: 100vw;
@@ -76,8 +74,6 @@ section:not(#sectionPin, .pin-wrap-sticky) {
 #sectionPin {
     height: 100vh;
     display: flex;
-    background: var(--text-color);
-    color: var(--bg-color);
     overflow: scroll;
 }
 
@@ -88,6 +84,18 @@ section:not(#sectionPin, .pin-wrap-sticky) {
     align-items: center;
     padding: 50px 10vw;
 }
+
+.pin-wrap-sticky {
+	/* Stick to Top */
+	height: 100vh;
+	width: 100vw;
+	position: sticky;
+	top: 0;
+
+	width: 100vw;
+	overflow-x: hidden;
+}
+
 
 .pin-wrap > * {
     min-width: 60vmax;
