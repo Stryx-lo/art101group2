@@ -14,16 +14,16 @@
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="./homepage/js/homepage.js" defer></script>
 
-  <!-- Audio -->
-  <audio loop id="myAudio" src="./homepage/audio/background.mp3"></audio>
-</head>
-
-<body>
-  <!-- Preloader -->
-  <div id="preloader">
-    <img src="./homepage/img/shelter.png">
-    <div id="title-text">
-      <p>Welcome to our <br> adoption center!</p>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <img src="./homepage/img/shelter.png">
+      <div id="title-text">
+        <p>Welcome to our <br> adoption center!</p>
+      </div>
+      <div id="door-container">
+        <img id="door-image" src="./homepage/img/closeddoors.png" alt="Closed Door">
+      </div>
     </div>
     <div id="door-wrapper">
       <img id="door-image" src="./homepage/img/closeddoors.png" alt="Closed Door">
@@ -78,14 +78,25 @@
   </div>
 
 
-  <!-- Story Containers -->
+
+<!-- Music button-->
+ <div id = "musicButton"> 
+
+  <button id = "stopMusic">&#9835 &#9208 </button>
+  <button id = "playMusic">&#9835 &#9205</button>
+  
+</div>
+
+
+<!-- Story Containers -->
+
   <div id="storyOne" class="story">
     <h1>Apollo the Cat</h1>
-    <div class="container">
-      <section>
-        <div class="story-right-align">
-          <img src="" id="">
-          <p>Apollo’s story begins in the most heartbreaking way. He was discovered trembling in a bush, suffering from
+      <div class="container">
+        <section>
+          <div class="story-right-align">
+            <img src="" id="">
+            <p>Apollo’s story begins in the most heartbreaking way. He was discovered trembling in a bush, suffering from
             severe mange and eye infections so intense that they had left him blind. A completely feral cat, Apollo was
             in such a desperate state that rescuers were able to corner him and scoop him up. His pain was unimaginable,
             and he was lost, not knowing how to escape his torment. The rescue team immediately began treating his mange
