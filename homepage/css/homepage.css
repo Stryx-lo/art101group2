@@ -121,7 +121,8 @@ h2{
     position: absolute; /* Position the button relative to the container */
     bottom: 10px; /* Adjust button placement */
     left: 50%; /* Center the button horizontally */
-    transform: translateX(-50%); /* Align button exactly in the center */
+    transform: translate(-50%, 0); /* Align button exactly in the center */
+    transform-origin: center;
     z-index: 10; /* Ensure button is on top of the image */
     color: #da7f45;
     font-size: 20px;
@@ -145,8 +146,8 @@ h2{
 
 #restart {
     position: absolute;
-    top: 20px; /* Adjust vertical position */
-    left: 10%; /* Center horizontally */
+    top: 2%; /* Adjust vertical position */
+    left: 5%; /* Center horizontally */
     transform: translateX(-50%); /* Centering adjustment */
     z-index: 1000; /* Ensure it's on top of other content */
     color: #da7f45;
@@ -154,7 +155,8 @@ h2{
     font-family: "Chewy", Times, serif;
     border: 1px solid #dce0a0;
     border-radius: 5px;
-    padding: 10px;
+    height: 55px;
+    width: 100px;
     text-align: center;
     cursor: pointer;
     background-color: #dbdea3;
@@ -208,60 +210,42 @@ h2{
     z-index: 10;
 }
 
-#playMusic {
+#playMusic, #stopMusic {
+    position: absolute; /* Position relative to the viewport */
+    top: 20px; /* Adjust vertical position */
+    right: 5%; /* Position to the left, near the restart button */
+    z-index: 10; /* Ensure it's above other content */
+    transform: translateX(-50%); /* Adjust for precise centering */
+    width: 60px;
+    height: 55px;
     color: #da7f45;
     font-size: 24px;
     font-family: "Chewy", Times, serif;
     border: 1px solid #dce0a0;
     border-radius: 5px;
-    /* padding: 10px; */
-    width: 60px;
-    height: 60px;
     text-align: center;
     cursor: pointer;
     background-color: #dbdea3;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: absolute; /* Absolute positioning for each button */
-    top: 3%; /* Bottom spacing from the image */
-    right: 5%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust button to be exactly centered */
-    z-index: 10; /* Ensure it's on top of the image */
 }
 
-#stopMusic {
-    color: #da7f45;
-    font-size: 24px;
-    font-family: "Chewy", Times, serif;
-    border: 1px solid #dce0a0;
-    border-radius: 5px;
-    /*padding: 10px; */
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    cursor: pointer;
-    background-color: #dbdea3;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: absolute; /* Absolute positioning for each button */
-    top: 3%; /* Bottom spacing from the image */
-    right: 5%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust button to be exactly centered */
-    z-index: 10; /* Ensure it's on top of the image */
+#playMusic:hover, #stopMusic:hover {
+    background-color: #da7f45;
+    color: #dbdea3;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 #info-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
-    border: 1px solid #dce0a0;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 40px; /* Match the image size */
-    height: 30px; /* Match the image size */
-    background-color: #dbdea3;
-}
+   top: 10px;
+   right: 0.5%;
+   transform: translateX(-50%);
+   z-index: 1000;
+   border: 1px solid #dce0a0;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   width: 50px;
+   height: 50px;
 
-#info-button img {
-    width: 100%; /* Fit inside the button */
-    height: 100%; /* Fit inside the button */
 }
