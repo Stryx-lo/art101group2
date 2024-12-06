@@ -251,17 +251,67 @@ h2{
 /* What follows is all the CSS for the info-button and info button info */
 #info-button {
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 10px;
     z-index: 1000;
     border: 1px solid #dce0a0;
     border-radius: 5px;
     cursor: pointer;
-    width: 40px; /* Match the image size */
-    height: 40px; /* Match the image size */
+    width: 50px; 
+    height: 50px; 
 }
 
 #info-button img {
     width: 100%; /* Fit inside the button */
     height: 100%; /* Fit inside the button */
 }
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 300px;
+    
+    background-color: #7668d7;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    right: 10%;
+    animation: fadeOut 3s;
+  }
+
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 90%;
+    transform: rotate(180deg) scaleX(2);
+    margin-left: 5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #7668d7 transparent transparent transparent;
+ }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    animation: fadeIn 1s;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
