@@ -246,3 +246,21 @@ h2{
     transform: scale(1.1); /* Grow uniformly */
     transform-origin: center; /* Ensure growth is centered */
 }
+
+/* Styling for the cursor */
+#cursor-animation {
+    position: absolute;
+    pointer-events: none; /* Prevents interaction */
+    z-index: 1000;
+    width: 50px; /* Adjust size to match paw image dimensions */
+    height: 50px;
+    display: none; /* Initially hidden */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* this is for centering the images around the cursor */
+#cursor-animation img {
+    width: 100%;
+    height: auto;
+}

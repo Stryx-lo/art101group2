@@ -97,3 +97,60 @@ $('#restart').click(  function(){
   $('#playMusic').show();
   $('#stopMusic').hide();
 })
+
+/* CURSOR ANIMATION */
+
+const cursorAnimation = $('#cursor-animation');
+    let mouseTimeout, animationTimeout, currentStep = 0;
+
+    // Paw images
+    const pawImages = [
+        './homepage/img/paw1.png',
+        './homepage/img/paw2.png',
+        './homepage/img/paw3.png',
+        './img/homepage/paw4.png',
+        './img/homepage/paw5.png',
+    ];
+
+    const animationSequence = () => {
+        if (currentStep < pawImages.length) {
+            // Show paw images one by one
+            cursorAnimation.css({
+                'background-image': `url(${pawImages[currentStep]})`,
+                display: 'block'
+            });
+            currentStep++;
+        } else if (currentStep >= pawImages.length && currentStep < 2 * pawImages.length - 1) {
+            // Reverse sequence
+            cursorAnimation.css({
+                'background-image': `url(${pawImages[2 * pawImages.length - 2 - currentStep]})`
+            });
+            currentStep++;
+        } else {
+            // End animation
+            cursorAnimation.css({ display: 'none' });
+            currentStep = 0; // Reset for next hover
+            clearTimeout(animationTimeout);
+            return;
+        }
+
+        // Set timeout for next image
+        animationTimeout = setTimeout(animationSequence, 200); // Adjust timing as needed
+    };
+
+    $(document).mousemove(function (e) {
+        // Position the cursor animation at the mouse location
+        cursorAnimation.css({
+            top: e.pageY - 25, // Adjust to center the image
+            left: e.pageX - 25
+        });
+
+        // Clear previous timeouts if the mouse is moving
+        clearTimeout(mouseTimeout);
+        clearTimeout(animationTimeout);
+
+        // Start the animation after 1 second of no movement
+        mouseTimeout = setTimeout(() => {
+            animationSequence();
+        }, 1000);
+    });
