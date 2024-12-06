@@ -187,6 +187,73 @@ h2{
     border-radius: 5px;
 }
 
+/* Code for sliding animations within story containers. PLEASE BE CAREFUL IF YOU ARE REMOVING REDUNDANT CODE */
+/* Prevent horizontal scrolling on the entire page */
+html, body {
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+    width: 100%;  /* Ensure full width of the page */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Basic styling for the container and button */
+body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    flex-direction: column;  /* Stack buttons and content vertically */
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.animateBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.animateBtn:hover {
+    background-color: #45a049;
+}
+
+/* Initially position the animated content off-screen to the right */
+.animated-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;  /* Start as invisible */
+    transform: translateX(100%);  /* Positioned to the right side */
+    transition: all 1s ease-out;  /* Smooth animation */
+}
+
+.animated-content.show {
+    opacity: 1;  /* Become visible */
+    transform: translateX(0);  /* Slide in from the right */
+}
+
+.animated-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.animated-text {
+    font-size: 18px;
+    color: #333;
+}
+
+
 /* adopt sticker*/
 .adopted-sticker {
     position: absolute;
