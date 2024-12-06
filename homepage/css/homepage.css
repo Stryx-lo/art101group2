@@ -8,7 +8,7 @@
     left: 0;
     width: 100vw; /* Ensures full width */
     height: 100vh;/* Full height of the viewport */
-    z-index: 9999; /* Ensures it is above other content */
+    z-index: 9998; /* Ensures it is above other content */
     overflow: hidden; /* Prevents scrolling */
 }
 
@@ -247,20 +247,14 @@ h2{
     transform-origin: center; /* Ensure growth is centered */
 }
 
-/* Styling for the cursor */
 #cursor-animation {
     position: absolute;
-    pointer-events: none; /* Prevents interaction */
-    z-index: 1000;
-    width: 50px; /* Adjust size to match paw image dimensions */
-    height: 50px;
-    display: none; /* Initially hidden */
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-/* this is for centering the images around the cursor */
-#cursor-animation img {
-    width: 100%;
+    display: none; /* Hidden by default */
+    pointer-events: none; /* Prevent interfering with other interactions */
+    z-index: 9999; /* Ensure it's above everything else */
+  }
+  
+  #cursor-animation img {
+    width: 100px; /* Adjust size as needed */
     height: auto;
-}
+  }
