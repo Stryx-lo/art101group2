@@ -248,6 +248,7 @@ h2{
     z-index: 10; /* Ensure it's on top of the image */
 }
 
+/* What follows is all the CSS for the info-button and info button info */
 #info-button {
     position: absolute;
     top: 10px;
@@ -258,7 +259,7 @@ h2{
     cursor: pointer;
     width: 40px; /* Match the image size */
     height: 30px; /* Match the image size */
-    background-color: #dbdea3;
+    height: 40px; /* Match the image size */
 }
 
 #info-button img {
