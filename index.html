@@ -1,139 +1,238 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Welcome to our Website</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- External CSS -->
-    <link rel="stylesheet" type="text/css" href="./homepage/css/homepage.css">
+<head>
+  <title>Welcome to our Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- jQuery Library -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./homepage/js/homepage.js" defer></script>
+  <!-- External CSS -->
+  <link rel="stylesheet" type="text/css" href="./homepage/css/homepage.css">
 
-    <!-- Audio -->
-<audio loop id="myAudio" src = "./homepage/audio/background.mp3"></audio>
-  </head>
+  <!-- jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./homepage/js/homepage.js" defer></script>
 
-  <body>
+  <!-- Audio -->
+  <audio loop id="myAudio" src="./homepage/audio/background.mp3"></audio>
+</head>
 
-    <!-- Cursor Animation -->
-<div id="cursor-animation"></div>
+<body>
 
-    <!-- Preloader -->
-    <div id="preloader">
-      <img src="./homepage/img/shelter.png">
-      <div id="title-text">
-        <p>Welcome to our <br> adoption center!</p>
-      </div>
-      <div id="door-container">
-        <img id="door-image" src="./homepage/img/closeddoors.png" alt="Closed Door">
-      </div>
+  <!-- Cursor Animation -->
+  <div id="cursor-animation"></div>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="./homepage/img/shelter.png">
+    <div id="title-text">
+      <p>Welcome to our <br> adoption center!</p>
     </div>
+    <div id="door-container">
+      <img id="door-image" src="./homepage/img/closeddoors.png" alt="Closed Door">
+    </div>
+  </div>
 
-    <!-- Main Content -->
+  <!-- Main Content -->
 
 
-<!-- Top Navbar -->
-<div class="topbar">
-  <!-- Text -->
-  <h1>Let's Play!</h1>
-  <h2>Pet Selection</h2>
-<!-- Buttons -->
-  <button id="restart">Restart</button>
-  <button id="playMusic">&#9835 &#9205</button>
-  <button id="stopMusic">&#9835 &#9208</button>
-  <button id="info-button" title="">
+  <!-- Top Navbar -->
+  <div class="topbar">
+    <!-- Text -->
+    <h1>Let's Play!</h1>
+    <h2>Pet Selection</h2>
+    <!-- Buttons -->
+    <button id="restart">Restart</button>
+    <button id="playMusic">&#9835 &#9205</button>
+    <button id="stopMusic">&#9835 &#9208</button>
+    <button id="info-button" title="">
       <img src="./homepage/img/infobutton.png" width="40" height="40">
-  </button>
-</div>
+    </button>
+  </div>
 
 
   <!-- Scroll Container for Pet Selection -->
-<div class="scroll-container">
-  <!-- Container for Cat -->
-  <div class="pet-container">
-    <img src="./homepage/img/cat.gif" alt="Cat" class="pet-image">
-    <button class="pet-button" id="storyOneBtn">Learn More</button>
+  <div class="scroll-container">
+    <!-- Container for Cat -->
+    <div class="pet-container">
+      <img src="./homepage/img/cat.gif" alt="Cat" class="pet-image">
+      <button class="pet-button" id="storyOneBtn">Learn More</button>
+    </div>
+
+    <!-- Container for Magpie -->
+    <div class="pet-container">
+      <img src="./homepage/img/magpie.gif" alt="Magpie" class="pet-image">
+      <button class="pet-button" id="storyTwoBtn">Learn More</button>
+    </div>
+
+    <!-- Container for Cow and pig -->
+    <div class="pet-container">
+      <img src="./homepage/img/cowpig.gif" alt="Cow and pig" class="pet-image">
+      <button class="pet-button" id="storyThreeBtn">Learn More</button>
+    </div>
   </div>
 
-  <!-- Container for Magpie -->
-  <div class="pet-container">
-    <img src="./homepage/img/magpie.gif" alt="Magpie" class="pet-image">
-    <button class="pet-button" id="storyTwoBtn">Learn More</button>
-  </div>
 
-  <!-- Container for Cow and pig -->
-  <div class="pet-container">
-    <img src="./homepage/img/cowpig.gif" alt="Cow and pig" class="pet-image">
-    <button class="pet-button" id="storyThreeBtn">Learn More</button>
-  </div>
-</div>
-
-
-<!-- Story Containers -->
+  <!-- Story Containers -->
+  <!-- Apollo's Story -->
   <div id="storyOne" class="story">
     <h1>Apollo the Cat</h1>
-    <p>Apollo’s story begins in the most heartbreaking way. He was discovered trembling in a bush, suffering from
-      severe mange and eye infections so intense that they had left him blind. A completely feral cat, Apollo was
-      in such a desperate state that rescuers were able to corner him and scoop him up. His pain was unimaginable,
-      and he was lost, not knowing how to escape his torment. The rescue team immediately began treating his mange
-      on the way home.</p>
-      <p>A vet visit brought devastating news: it was likely that Apollo would lose his sight entirely due to
-        the infection. This was a crushing blow for everyone involved. But Apollo’s blindness unexpectedly
-        became a tool for the team. It allowed them to make strides in socializing him, a process that would
-        take time and patience. They found that their biggest breakthroughs happened during the daily cleaning
-        sessions, as Apollo struggled to use the litter box. His reluctance helped soften his tough exterior,
-        and, over time, his true personality began to emerge.</p>
-        <p>Five months later, Apollo was completely healed—and in a stunning twist, his left eye survived the
+    <div class="container">
+      <p>Apollo’s story begins in the most heartbreaking way. He was discovered trembling in a bush, suffering from
+        severe mange and eye infections so intense that they had left him blind. A completely feral cat, Apollo was
+        in such a desperate state that rescuers were able to corner him and scoop him up. His pain was unimaginable,
+        and he was lost, not knowing how to escape his torment. The rescue team immediately began treating his mange
+        on the way home.</p>
+
+      <!-- Button 1 to trigger animation for content 1 -->
+      <button class="animateBtn" data-target="#contentApollo1">Click to Animate Content 1</button>
+
+      <!-- Content 1 -->
+      <div id="contentApollo1" class="animated-content">
+        <img src="" alt="Apollo Image 1" class="animated-image">
+        <p class="animated-text">
+          A vet visit brought devastating news: it was likely that Apollo would lose his sight entirely due to
+          the infection. This was a crushing blow for everyone involved. But Apollo’s blindness unexpectedly
+          became a tool for the team. It allowed them to make strides in socializing him, a process that would
+          take time and patience. They found that their biggest breakthroughs happened during the daily cleaning
+          sessions, as Apollo struggled to use the litter box. His reluctance helped soften his tough exterior,
+          and, over time, his true personality began to emerge.</p>
+      </div>
+
+
+      <!-- Button 2 to trigger animation for content 2 -->
+      <button class="animateBtn" data-target="#contentApollo2">Click to Animate Content 2</button>
+
+      <!-- Content 2 -->
+      <div id="contentApollo2" class="animated-content">
+        <img src="" alt="Apollo Image 2" class="animated-image">
+        <p class="animated-text">
+          Five months later, Apollo was completely healed—and in a stunning twist, his left eye survived the
           infection. Although his vision isn’t perfect, he’s no longer fully blind. Because of his disability, the
           team decided to make Apollo a permanent resident. They discovered that he had an extraordinary love for
           kittens. Now, Apollo plays a vital role in the sanctuary, helping newly rescued kittens adjust to their new
           lives, offering them comfort, love, and companionship as they settle in.</p>
+      </div>
+
+
+      <!-- Button 3 to trigger animation for content 3 -->
+      <button class="animateBtn" data-target="#contentApollo3">Click to Animate Content 3</button>
+
+      <!-- Content 3 -->
+      <div id="contentApollo3" class="animated-content">
+        <img src="https://via.placeholder.com/150" alt="Image 3" class="animated-image">
+        <p class="animated-text">Placeholder text</p>
+      </div>
+    </div>
     <button class="clearbtn">Clear</button>
   </div>
 
+  <!-- Molly's Story -->
   <div id="storyTwo" class="story">
-    <h1>Molly the Magpie</h1>
-    <p>One quiet afternoon, Reece and Juliet found a small magpie lying on the ground, weak and alone. They
-      could see she had fallen from her nest and, with no hesitation, brought her home and named her Molly. The
-      young magpie was fragile, frightened, and unsure of her new environment, but Reece and Juliet were
-      determined to help her. Every day they nursed her, providing care and patience, hoping that Molly would
-      grow stronger and survive.</p>
-      <p>When the time came, they introduced Molly to their pitbull, Peggy, hoping the two would coexist
-        peacefully. Peggy never pressured Molly, simply sitting nearby, giving Molly space to adjust. Slowly,
-        an unlikely bond began to form. Peggy took on a nurturing role, guiding Molly with a maternal
-        tenderness that helped the magpie feel safe in her new home.</p>
-        <p>As the days passed, Molly blossomed under Peggy’s care. She followed the dog everywhere, her once timid
+    <div class="container">
+      <h1>Molly the Magpie</h1>
+      <!-- Put first story illustration here -->
+      <p>One quiet afternoon, Reece and Juliet found a small magpie lying on the ground, weak and alone. They
+        could see she had fallen from her nest and, with no hesitation, brought her home and named her Molly. The
+        young magpie was fragile, frightened, and unsure of her new environment, but Reece and Juliet were
+        determined to help her. Every day they nursed her, providing care and patience, hoping that Molly would
+        grow stronger and survive.</p>
+
+      <!-- Button 1 to trigger animation for [paragraph 1 -->
+      <button class="animateBtn" data-target="#contentMolly1">Click to Animate Content 1</button>
+
+      <!-- Paragraph 1 -->
+      <div id="contentMolly1" class="animated-content">
+        <img src="" alt="Molly Image 1" class="animated-image">
+        <p class="animated-text">
+          When the time came, they introduced Molly to their pitbull, Peggy, hoping the two would coexist
+          peacefully. Peggy never pressured Molly, simply sitting nearby, giving Molly space to adjust. Slowly,
+          an unlikely bond began to form. Peggy took on a nurturing role, guiding Molly with a maternal
+          tenderness that helped the magpie feel safe in her new home. </p>
+      </div>
+
+
+      <!-- Button 2 to trigger animation for Molly paragraph 2 -->
+      <button class="animateBtn" data-target="#contentMolly2">Click to Animate Content 2</button>
+
+      <!-- Paragraph 2 -->
+      <div id="contentMolly2" class="animated-content">
+        <img src="./img/otter2.jpg" alt="Image 2" class="animated-image">
+        <p class="animated-text">As the days passed, Molly blossomed under Peggy’s care. She followed the dog
+          everywhere, her once timid
           nature now replaced with confidence. One afternoon, Reece and Juliet found the two of them curled up
           together, fast asleep. Molly, once a frightened orphan, had found a family in Peggy, and in the process, a
           deep and lasting bond formed between the two. Now, Molly lives peacefully with Reece, Juliet, and Peggy,
-          her once-uncertain life filled with love, companionship, and the protection of her loyal friend.</p>      
+          her once-uncertain life filled with love, companionship, and the protection of her loyal friend.</p>
+      </div>
+
+
+      <!-- Button 3 to trigger animation for content 3 -->
+      <button class="animateBtn" data-target="#contentMolly3">Click to Animate Content 3</button>
+
+      <!-- Content 3 -->
+      <div id="contentMolly3" class="animated-content">
+        <img src="https://via.placeholder.com/150" alt="Image 3" class="animated-image">
+        <p class="animated-text">Content 3 slides from the right side too!</p>
+      </div>
+    </div>
     <button class="clearbtn">Clear</button>
   </div>
 
+  <!-- Marley's Story -->
   <div id="storyThree" class="story">
-    <h1>Marley the Pig</h1>
-    <p>As the days passed, Molly blossomed under Peggy’s care. She followed the dog everywhere, her once timid
-      nature now replaced with confidence. One afternoon, Reece and Juliet found the two of them curled up
-      together, fast asleep. Molly, once a frightened orphan, had found a family in Peggy, and in the process, a
-      deep and lasting bond formed between the two. Now, Molly lives peacefully with Reece, Juliet, and Peggy,
-      her once-uncertain life filled with love, companionship, and the protection of her loyal friend.</p>
-      <p>Within a week Marley was becoming slightly more rambunctious, but her feeding her was becoming more
-        challenging. She still refused milk replacement. In an effort to get her to eat it, the refuge would
-        mix fruit punch with the milk. But Marley started to dislike the fruit punch flavors, so they
-        sanctuary had to start experimenting with new flavors that Marely would eat. Once they figure that
-        issue out, Marley became even more picky and wouldn’t eat any formula that wasn’t a specific
-        temperature. They refuge was running out of options for Marley, as she wasn’t eating as much as she
-        should. </p>
-        <p>Desperate to help her, the refuge reached out to Critter Creek Farm Sanctuary. The farm had recently
+    <div class="container">
+      <h1>Marley the Pig</h1>
+      <!-- Put first story illustration here -->
+      <p>One day, the team at Sisu Refuge received an urgent call about a piglet found abandoned on the side of the
+        road. While being transported with her family, the tiny piglet had fallen from the truck—shaken, malnourished,
+        and terrified. Fearing she might not survive, the refuge took her in and named her Marley. Over the next few
+        days, Marley showed signs of recovery—eating, but only fruit punch, refusing vital milk replacement. She was
+        also deeply depressed, withdrawn, and unwilling to play.</p>
+
+      <!-- Button 1 to trigger animation for [paragraph 1 -->
+      <button class="animateBtn" data-target="#contentMarley1">Click to Animate Content 1</button>
+
+      <!-- Paragraph 1 -->
+      <div id="contentMarley1" class="animated-content">
+        <img src="" alt="Marley Image 1" class="animated-image">
+        <p class="animated-text">
+          Within a week Marley was becoming slightly more rambunctious, but her feeding her was becoming more
+          challenging. She still refused milk replacement. In an effort to get her to eat it, the refuge would
+          mix fruit punch with the milk. But Marley started to dislike the fruit punch flavors, so they
+          sanctuary had to start experimenting with new flavors that Marely would eat. Once they figure that
+          issue out, Marley became even more picky and wouldn’t eat any formula that wasn’t a specific
+          temperature. They refuge was running out of options for Marley, as she wasn’t eating as much as she
+          should.</p>
+      </div>
+
+
+      <!-- Button 2 to trigger animation for Molly paragraph 2 -->
+      <button class="animateBtn" data-target="#contentMarley2">Click to Animate Content 2</button>
+
+      <!-- Paragraph 2 -->
+      <div id="contentMarley2" class="animated-content">
+        <img src="" alt="Marley Image 2" class="animated-image">
+        <p class="animated-text">
+          Desperate to help her, the refuge reached out to Critter Creek Farm Sanctuary. The farm had recently
           welcomed a young calf, Eli, who was also struggling with grief after being separated from his mother.
           The team decided to introduce the two, hoping they might comfort one another. From the moment they met,
           Marley and Eli formed an unbreakable bond. They began playing, sleeping, and eating together—growing
           stronger and happier every day. The connection between the two was so profound that Critter Creek Farm
           decided to adopt them both permanently. Together, Marley and Eli now live a joyful life, side by side,
-          forever—two unlikely friends whose love and healing saved them both.</p>     
+          forever—two unlikely friends whose love and healing saved them both.</p>
+      </div>
+
+      <!-- Button 3 to trigger animation for content 3 -->
+      <button class="animateBtn" data-target="#contentMarley3">Click to Animate Content 3</button>
+
+      <!-- Content 3 -->
+      <div id="contentMarley3" class="animated-content">
+        <img src="https://via.placeholder.com/150" alt="Marley Image 3" class="animated-image">
+        <p class="animated-text">Content 3 slides from the right side too!</p>
+      </div>
+    </div>
     <button class="clearbtn">Clear</button>
   </div>
 

@@ -66,6 +66,22 @@ $('#restart').click(function() {
 
 });
 
+// Code for animated story "next" buttons
+$(document).ready(function() {
+  // When any button with the class 'animateBtn' is clicked
+  $('.animateBtn').click(function() {
+      // Get the target content ID from the 'data-target' attribute
+      var targetContent = $(this).data('target');
+
+      // Add the 'show' class to the target content to trigger the animation
+      $(targetContent).addClass('show');
+      
+      // Optionally, hide the clicked button with a smooth fade-out effect
+      $(this).fadeOut(500);  // Adjust 500 to change the speed of the fade-out
+  });
+});
+
+
 // Music
 
   $('#playMusic').show();
