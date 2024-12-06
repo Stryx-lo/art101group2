@@ -25,18 +25,18 @@
     width: 100%; /* Center the text */
 }
 
-/* Door Wrapper, aka both open and closed doors */
-#door-wrapper {
+/* Door conrainter, aka both open and closed doors */
+#door-container {
     display: flex;
     justify-content: center; /* Horizontally centers the door */
     position: absolute; /* Allows precise positioning */
     top: 75%; /* Moves the door 3/4 down the viewport */
     left: 50%; /* Horizontally aligns the door to the center */
     transform: translate(-50%, -50%); /* Ensures the door stays centered */
-    width: 100%; /* Ensures the wrapper spans full width */
+    width: 100%; /* Ensures the container spans full width */
 }
 
-/* Door Image Inside Preloader, actual image properties */
+/* Door Image inside Preloader, actual image properties */
 #door-image {
     display: block;
     width: 335px; /* Fixed width */
@@ -82,9 +82,9 @@ h2{
     text-align: center;
 }
 
-/* Scroll container: horizontal scrolling */
+/* Scroll container (moves horizontally) */
 .scroll-container {
-    display: flex; /* Arrange child containers in a row */
+    display: flex; /* Arrange each pet cotnainer in a row */
     background-color: #85c7f9;
     border: 4px solid white;
     overflow-x: auto; /* Allow horizontal scrolling */
@@ -94,7 +94,7 @@ h2{
     border-radius: 5px;
 }
 
-.scroll-container::-webkit-scrollbar {
+.scroll-container::-webkit-scrollbar { /*good for visibility cross platforms*/
     display: none;
 
 }
@@ -134,15 +134,8 @@ h2{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Button hover effect */
-.pet-container .pet-button:hover {
-    background-color: #da7f45;
-    color: #dbdea3;
-    transform: scale(1.1);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-}
 
-  #main-content {
+#main-content {
     display: none; /* Hide content initially */
 }
 
@@ -167,12 +160,6 @@ h2{
     background-color: #dbdea3;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-/* Reset button hover */
-#restart:hover {
-    background-color: #da7f45;
-    color: #dbdea3;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-}
 
 /* "Clear" button style */
 .clearbtn {
@@ -190,10 +177,9 @@ h2{
 }
 
 /* "Clear" button hover Effect */
-.clearbtn:hover {
+#playMusic:hover, #stopMusic:hover, #restart:hover, .clearbtn:hover, .pet-button:hover{
     background-color: #da7f45;
     color: #dbdea3;
-    transform: scale(1.1);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -228,7 +214,9 @@ h2{
     font-family: "Chewy", Times, serif;
     border: 1px solid #dce0a0;
     border-radius: 5px;
-    padding: 10px;
+    /* padding: 10px; */
+    width: 60px;
+    height: 60px;
     text-align: center;
     cursor: pointer;
     background-color: #dbdea3;
@@ -246,7 +234,9 @@ h2{
     font-family: "Chewy", Times, serif;
     border: 1px solid #dce0a0;
     border-radius: 5px;
-    padding: 10px;
+    /*padding: 10px; */
+    width: 60px;
+    height: 60px;
     text-align: center;
     cursor: pointer;
     background-color: #dbdea3;
@@ -260,15 +250,18 @@ h2{
 
 #info-button {
     position: absolute;
-   top: 10px;
-   right: 0.5%;
-   transform: translateX(-50%);
-   z-index: 1000;
-   border: 1px solid #dce0a0;
-   border-radius: 5px;
-   cursor: pointer;
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
-   width: 50px;
-   height: 50px;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40px; /* Match the image size */
+    height: 30px; /* Match the image size */
+    background-color: #dbdea3;
+}
 
+#info-button img {
+    width: 100%; /* Fit inside the button */
+    height: 100%; /* Fit inside the button */
 }
