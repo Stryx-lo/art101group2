@@ -121,7 +121,6 @@ h2{
     position: absolute; /* Position the button relative to the container */
     bottom: 10px; /* Adjust button placement */
     left: 50%; /* Center the button horizontally */
-    transform: translateX(-50%); /* Align button exactly in the center */
     z-index: 10; /* Ensure button is on top of the image */
     color: #da7f45;
     font-size: 20px;
@@ -132,10 +131,10 @@ h2{
     background-color: #dbdea3;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
 }
 
-
-#main-content {
+  #main-content {
     display: none; /* Hide content initially */
 }
 
@@ -147,7 +146,6 @@ h2{
     position: absolute;
     top: 20px; /* Adjust vertical position */
     left: 10%; /* Center horizontally */
-    transform: translateX(-50%); /* Centering adjustment */
     z-index: 1000; /* Ensure it's on top of other content */
     color: #da7f45;
     font-size: 24px;
@@ -159,6 +157,7 @@ h2{
     cursor: pointer;
     background-color: #dbdea3;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
 }
 
 /* "Clear" button style */
@@ -173,14 +172,7 @@ h2{
     cursor: pointer;
     background-color: #dbdea3;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-}
-
-/* "Clear" button hover Effect */
-#playMusic:hover, #stopMusic:hover, #restart:hover, .clearbtn:hover, .pet-button:hover{
-    background-color: #da7f45;
-    color: #dbdea3;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform-origin: center;
 }
 
 /* Story Containers (hidden initially) */
@@ -188,8 +180,7 @@ h2{
     color: white;
     font-family: "DynaPuff";
     border: 4px solid white;
-    padding-top: 40px;
-    height: 140px;
+    padding: 10px;
     background: rgb(71, 113, 237);
     display: none;
     margin: 10px;
@@ -208,7 +199,7 @@ h2{
     z-index: 10;
 }
 
-#playMusic {
+#playMusic, #stopMusic {
     color: #da7f45;
     font-size: 24px;
     font-family: "Chewy", Times, serif;
@@ -224,94 +215,34 @@ h2{
     position: absolute; /* Absolute positioning for each button */
     top: 3%; /* Bottom spacing from the image */
     right: 5%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust button to be exactly centered */
     z-index: 10; /* Ensure it's on top of the image */
+    transform-origin: center;
 }
 
-#stopMusic {
-    color: #da7f45;
-    font-size: 24px;
-    font-family: "Chewy", Times, serif;
-    border: 1px solid #dce0a0;
-    border-radius: 5px;
-    /*padding: 10px; */
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    cursor: pointer;
-    background-color: #dbdea3;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: absolute; /* Absolute positioning for each button */
-    top: 3%; /* Bottom spacing from the image */
-    right: 5%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust button to be exactly centered */
-    z-index: 10; /* Ensure it's on top of the image */
-}
-
-/* What follows is all the CSS for the info-button and info button info */
 #info-button {
     position: absolute;
-    top: 20px;
-    right: 10px;
-    z-index: 1000;
-    border: 1px solid #dce0a0;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 50px; 
-    height: 50px; 
+   top: 10px;
+   right: 0.5%;
+   transform: translateX(-50%);
+   z-index: 1000;
+   border: 1px solid #dce0a0;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   width: 50px;
+   height: 50px;
+
 }
 
-#info-button img {
-    width: 100%; /* Fit inside the button */
-    height: 100%; /* Fit inside the button */
+/* Button hover effects */
+#playMusic:hover, 
+#stopMusic:hover, 
+#restart:hover, 
+.clearbtn:hover, 
+.pet-button:hover {
+    background-color: #da7f45;
+    color: #dbdea3;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1); /* Grow uniformly */
+    transform-origin: center; /* Ensure growth is centered */
 }
-
-/* Popup container - can be anything you want */
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  /* The actual popup */
-  .popup .popuptext {
-    visibility: hidden;
-    width: 300px;
-    
-    background-color: #7668d7;
-    color: #fff;
-    text-align: left;
-    border-radius: 6px;
-    padding: 8px;
-    position: absolute;
-    z-index: 1;
-    top: 150%;
-    right: 10%;
-    animation: fadeOut 3s;
-  }
-
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 90%;
-    transform: rotate(180deg) scaleX(2);
-    margin-left: 5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #7668d7 transparent transparent transparent;
- }
-  
-  /* Toggle this class - hide and show the popup */
-  .popup .show {
-    visibility: visible;
-    animation: fadeIn 1s;
-  }
-
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-

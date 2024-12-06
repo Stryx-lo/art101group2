@@ -9,7 +9,7 @@ $(document).ready(function () {
       $(this).attr('src', './homepage/img/opendoors.png');
     },
     function () {
-      $(this).attr('src', './homepage/img/closeddoors.png');
+      $(this).attr('src', './homepage/img/opendoors.png');
     }
   );
 
@@ -18,13 +18,6 @@ $(document).ready(function () {
     $('#preloader').fadeOut('slow', function () {
       $('.scroll-container').fadeIn('slow');
     });
-  });
-
-  //info button - when the user clicks on the button, opens the popup
-  $('#info-button').click(function () {
-    console.log("InfoBox is activated!");
-    $("#infoBox").toggleClass("show");
-
   });
 
   //Add adopted sticker if there's an adopted animal
