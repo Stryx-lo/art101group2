@@ -3,28 +3,25 @@ html {
     max-width: 100vw;
 }
 
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
 }
 
-body {
+/* body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: var(--text-color);
-    background: var(--bg-color);
     transition: 0.3s ease-out;
     overflow-x: hidden;
     max-width: 100vw;
     width: 100%;
     overscroll-behavior: none;
-}
+} */
 
 .container section {
     min-height: 100vh;
     width: 100%;
     max-width: 100vw;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     position: relative;
 }
 
@@ -37,48 +34,47 @@ section:not(#sectionPin, .pin-wrap-sticky) {
     place-items: center;
 }
 
-.container img {
+/* .container img {
     height: 80vh;
     width: auto;
     max-width: 100%;
     object-fit: cover;
-}
+} */
 
-.container h1 {
-    font-size: clamp(1.5rem, 8vw + 1rem, 6rem);
-    line-height: 1;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    position: absolute;
-    top: 10vw;
-    left: 10vw;
-    z-index: 4;
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
+/* 
 .container h1 span {
     display: block;
-}
+} */
 
 .container h2 {
     font-size: 2rem;
     max-width: 400px;
 }
 
-.credit a {
+/* .credit a {
     color: var(--text-color);
-}
+} */
 
 .container * {
     box-sizing: border-box;
 }
+.container {
+    width: 100vw;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
 
 #sectionPin {
-    height: 100vh;
+	/* Stretch it out, so that we create room for the horizontal scroll animation */
+	height: 500vh;
     display: flex;
-    background: var(--text-color);
-    color: var(--bg-color);
-    overflow: scroll;
+	overflow: visible; /* To make position sticky work &mldr; */
+
+	view-timeline-name: --section-pin-tl;
+	view-timeline-axis: block;
 }
 
 .pin-wrap {
@@ -89,16 +85,35 @@ section:not(#sectionPin, .pin-wrap-sticky) {
     padding: 50px 10vw;
 }
 
-.pin-wrap > * {
-    min-width: 60vmax;
-    padding: 0 5vmax;
+.pin-wrap-sticky {
+	/* Stick to Top */
+	height: 100vh;
+	width: 100vw;
+	position: sticky;
+	top: 0;
+
+	width: 100vw;
+	/* overflow-x: hidden; */
 }
 
-.container > p {
+.pin-wrap {
+	height: 100vh;
+	width: 250vmax;
+
+	/* Hook animation */
+	will-change: transform;
+	animation: linear move forwards;
+
+	/* Link animation to view-timeline */
+	animation-timeline: --section-pin-tl;
+	animation-range: contain 0% contain 100%;
+}
+
+/* .container > p {
     position: absolute;
     bottom: 10vw;
     right: 10vw;
     width: 200px;
     line-height: 1.5;
 }
-
+ */
