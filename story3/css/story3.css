@@ -1,42 +1,64 @@
-html, body, main {
-    width: 100%;
+/* Prevent horizontal scrolling on the entire page */
+html, body {
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+    width: 100%;  /* Ensure full width of the page */
+    margin: 0;
+    padding: 0;
     height: 100%;
 }
 
-img {
-    width: 500px;
-    height: 80%;
-    object-fit: cover;
-    object-position: center;
-}
-
-p {
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* This codes for the hybrid scrolling */
-.sticky_parent {
-    height: 500vh;
-}
-
-.sticky {
-    overflow: hidden;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    border: 1px solid blue;
-}
-
-/* Width of scroll_section has to match height of sticky_parent */
-.scroll_section {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 500vw;
-    will-change: transform;
+/* Basic styling for the container and button */
+body, html {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0 5vw;
+    font-family: Arial, sans-serif;
+    flex-direction: column;  /* Stack buttons and content vertically */
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.animateBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.animateBtn:hover {
+    background-color: #45a049;
+}
+
+/* Initially position the animated content off-screen to the right */
+.animated-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;  /* Start as invisible */
+    transform: translateX(100%);  /* Positioned to the right side */
+    transition: all 1s ease-out;  /* Smooth animation */
+}
+
+.animated-content.show {
+    opacity: 1;  /* Become visible */
+    transform: translateX(0);  /* Slide in from the right */
+}
+
+.animated-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.animated-text {
+    font-size: 18px;
+    color: #333;
 }

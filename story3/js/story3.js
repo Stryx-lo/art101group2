@@ -14,45 +14,17 @@
 //     // Add later: code to make css animate image
 // })
 
+// script.js
+$(document).ready(function() {
+    // When any button with the class 'animateBtn' is clicked
+    $('.animateBtn').click(function() {
+        // Get the target content ID from the 'data-target' attribute
+        var targetContent = $(this).data('target');
 
-
-// hybrid scroll feature
-const stickySections = [...document.querySelectorAll('sticky')];
-// for adding images to scrolling section
-let images = [
-    ''
-]
-
-images.forEach(img => {
-    stickySections.forEach(section => {
-        let image = document.createElement('img');
-        image.src = img;
-        section.querySelector('.scroll_section').appendChild(image);
-    })
-})
-
-// function for sideways scroll. Credit to Conor Bailey on Youtube
-// gets postion of stickySection
-window.addEventListener('scroll', (e) => {
-    for (let i = 0; i < stickySections.length; i++) {
-        transform(stickySections[i]);
-    }
-})
-
-function transform(section) {
-    const offsetTop = section.parentElement.offsetTop;
-    const scrollSection = section.querySelector('.scroll_section');
-    let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
-    percentage = percentage < 0 ? 0 : percentage > 400 ? 400 : percentage;
-    scrollSection.style.transform = 'translate3d(${-([percentage])}vw, 0, 0)';
-}
-
-// Event listern for go back button
-
-
-document.getElementById('adopt').addEventListener('click', function(){
-    const animalId = this.getAttribute("animal-id");
-    if(animalId){
-        localStorage.setItem("adoptedAnimal", animalId);
-    }
-})
+        // Add the 'show' class to the target content to trigger the animation
+        $(targetContent).addClass('show');
+        
+        // Optionally, hide the clicked button with a smooth fade-out effect
+        $(this).fadeOut(500);  // Adjust 500 to change the speed of the fade-out
+    });
+});

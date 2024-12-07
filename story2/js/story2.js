@@ -14,47 +14,27 @@
 //     // Add later: code to make css animate image
 // })
 
+// Add this JavaScript inside your story2.js file
 
+$(document).ready(function() {
+    let scrollTimeout;
 
-// hybrid scroll feature
-const stickySections = [...document.querySelectorAll('sticky')];
-// for adding images to scrolling section
-let images = [
-    './img/dogplaceholder1',
-    './img/dogplaceholdertwo',
-]
+    // Detect mousewheel event
+    $(window).on('wheel', function(e) {
+        clearTimeout(scrollTimeout);
 
-images.forEach(img => {
-    stickySections.forEach(section => {
-        let image = document.createElement('img');
-        image.src = img;
-        section.querySelector('.scroll_section').appendChild(image);
-    })
-})
+        // If the wheel is scrolled horizontally (deltaX)
+        if (e.originalEvent.deltaX !== 0) {
+            // Scroll horizontally
+            $(".container").scrollLeft($(".container").scrollLeft() + e.originalEvent.deltaX);
+        }
 
-// function for sideways scroll. Credit to Conor Bailey on Youtube
-// gets postion of stickySection
-window.addEventListener('scroll', (e) => {
-    for (let i = 0; i < stickySections.length; i++) {
-        transform(stickySections[i]);
-    }
-})
+        // Prevent vertical scrolling from affecting the page
+        e.preventDefault();
 
-function transform(section) {
-    const offsetTop = section.parentElement.offsetTop;
-    const scrollSection = section.querySelector('.scroll_section');
-    let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
-    percentage = percentage < 0 ? 0 : percentage > 400 ? 400 : percentage;
-    scrollSection.style.transform = 'translate3d(${-([percentage])}vw, 0, 0)';
-}
-
-// Event listern for go back button
-
-
-document.getElementById('adopt').addEventListener('click', function(){
-    const animalId = this.getAttribute("animal-id");
-    if(animalId){
-        localStorage.setItem("adoptedAnimal", animalId);
-    }
-})
-
+        // Reset timeout to enable smooth scrolling
+        scrollTimeout = setTimeout(() => {
+            $(".container").css('scroll-snap-type', 'none');
+        }, 100);
+    });
+});
