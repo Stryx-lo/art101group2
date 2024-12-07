@@ -67,6 +67,14 @@ $('#restart').click(function() {
 
 });
 
+//info button - when the user clicks on the button, opens the popup
+  $('#info-button').click(function () {
+    console.log("InfoBox is activated!");
+    $("#infoBox").toggleClass("show");
+
+  });
+
+
 // Code for animated story "next" buttons
 $(document).ready(function() {
   // When any button with the class 'animateBtn' is clicked

@@ -286,20 +286,73 @@ body, html {
     transform-origin: center;
 }
 
+/* What follows is all of the CSS for the info button. I'm not sure why it keeps getting deleted. */
+/*  */
 #info-button {
     position: absolute;
-   top: 10px;
-   right: 0.5%;
-   transform: translateX(-50%);
-   z-index: 1000;
-   border: 1px solid #dce0a0;
-   border-radius: 5px;
-   cursor: pointer;
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
-   width: 50px;
-   height: 50px;
+    top: 20px;
+    right: 10px;
+    z-index: 1000;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50px; 
+    height: 50px; 
 
 }
+
+#info-button img {
+    width: 100%; /* Fit inside the button */
+    height: 100%; /* Fit inside the button */
+}
+
+/* The CSS for the div container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+/* Pop-Up Text + animation */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 300px;
+    
+    background-color: #7668d7;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    right: 10%;
+  }
+
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 90%;
+    transform: rotate(180deg) scaleX(2);
+    margin-left: 5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #7668d7 transparent transparent transparent;
+ }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    animation: fadeIn 1s;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 
 /* Button hover effects */
 #playMusic:hover, 
@@ -325,3 +378,4 @@ body, html {
     width: 100px; /* Adjust size as needed */
     height: auto;
   }
+
