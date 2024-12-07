@@ -18,6 +18,7 @@
     color: #e5e4e4;
     top: 10%; /* Adjust positioning */
     justify-content: center;
+    font-family: "Chewy", "Comic Sans", cursive;
     font-size: 100px;
     font-weight: bolder;
     text-align: center;
@@ -59,13 +60,13 @@ body {
     margin: 0; /* removes te default margins */
     height: 100vh; /* Full height of the viewport */
     background-color: #9CDCFE;
-    font-family: "Chewy", "Comic Sans", cursive;
 }
     
 /* Heading text */
 h1 {
     color: #85c7f9;
     font-size: 48px;
+    font-family: "Chewy", Times, serif;
     margin-bottom: 20px; /* adds some space below the heading */
     text-align: center; /* Centers the text horizontally */
     text-shadow: 
@@ -122,6 +123,15 @@ h2{
     left: 50%; /* Center the button horizontally */
     transform: translateX(-50%); /* Align button exactly in the center */
     z-index: 10; /* Ensure button is on top of the image */
+    color: #da7f45;
+    font-size: 20px;
+    font-family: "Chewy", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: #dbdea3;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -139,10 +149,34 @@ h2{
     left: 10%; /* Center horizontally */
     transform: translateX(-50%); /* Centering adjustment */
     z-index: 1000; /* Ensure it's on top of other content */
+    color: #da7f45;
+    font-size: 24px;
+    font-family: "Chewy", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dbdea3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* "Clear" button style */
+.clearbtn {
+    color: #da7f45;
+    font-size: 24px;
+    font-family: "Chewy", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dbdea3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-/* button hover Effect */
+}
+
+/* "Clear" button hover Effect */
 #playMusic:hover, #stopMusic:hover, #restart:hover, .clearbtn:hover, .pet-button:hover{
     background-color: #da7f45;
     color: #dbdea3;
@@ -175,8 +209,17 @@ h2{
 }
 
 #playMusic {
+    color: #da7f45;
+    font-size: 24px;
+    font-family: "Chewy", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    /* padding: 10px; */
     width: 60px;
     height: 60px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dbdea3;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: absolute; /* Absolute positioning for each button */
     top: 3%; /* Bottom spacing from the image */
@@ -186,8 +229,17 @@ h2{
 }
 
 #stopMusic {
+    color: #da7f45;
+    font-size: 24px;
+    font-family: "Chewy", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    /*padding: 10px; */
     width: 60px;
     height: 60px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dbdea3;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: absolute; /* Absolute positioning for each button */
     top: 3%; /* Bottom spacing from the image */
@@ -201,24 +253,15 @@ h2{
     top: 10px;
     right: 10px;
     z-index: 1000;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    cursor: pointer;
     width: 40px; /* Match the image size */
-    height: 40px; /* Match the image size */
+    height: 30px; /* Match the image size */
+    background-color: #dbdea3;
 }
 
 #info-button img {
     width: 100%; /* Fit inside the button */
     height: 100%; /* Fit inside the button */
-}
-
-/* style of buttons */
-#playMusic, #stopMusic, #restart, .clearbtn, .pet-button, #info-button{
-    color: #da7f45;
-    font-size: 20px;
-    font-family: "Chewy", Times, serif;
-    border: 1px solid #dce0a0;
-    border-radius: 5px;
-    padding: 10px 15px;
-    background-color: #dbdea3;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
