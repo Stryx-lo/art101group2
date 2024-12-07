@@ -25,18 +25,18 @@
     width: 100%; /* Center the text */
 }
 
-/* Door conrainter, aka both open and closed doors */
-#door-container {
+/* Door Wrapper, aka both open and closed doors */
+#door-wrapper {
     display: flex;
     justify-content: center; /* Horizontally centers the door */
     position: absolute; /* Allows precise positioning */
     top: 75%; /* Moves the door 3/4 down the viewport */
     left: 50%; /* Horizontally aligns the door to the center */
     transform: translate(-50%, -50%); /* Ensures the door stays centered */
-    width: 100%; /* Ensures the container spans full width */
+    width: 100%; /* Ensures the wrapper spans full width */
 }
 
-/* Door Image inside Preloader, actual image properties */
+/* Door Image Inside Preloader, actual image properties */
 #door-image {
     display: block;
     width: 335px; /* Fixed width */
@@ -82,9 +82,9 @@ h2{
     text-align: center;
 }
 
-/* Scroll container (moves horizontally) */
+/* Scroll container: horizontal scrolling */
 .scroll-container {
-    display: flex; /* Arrange each pet cotnainer in a row */
+    display: flex; /* Arrange child containers in a row */
     background-color: #85c7f9;
     border: 4px solid white;
     overflow-x: auto; /* Allow horizontal scrolling */
@@ -94,7 +94,7 @@ h2{
     border-radius: 5px;
 }
 
-.scroll-container::-webkit-scrollbar { /*good for visibility cross platforms*/
+.scroll-container::-webkit-scrollbar {
     display: none;
 
 }
@@ -121,6 +121,7 @@ h2{
     position: absolute; /* Position the button relative to the container */
     bottom: 10px; /* Adjust button placement */
     left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%); /* Align button exactly in the center */
     z-index: 10; /* Ensure button is on top of the image */
     color: #da7f45;
     font-size: 20px;
@@ -131,7 +132,14 @@ h2{
     background-color: #dbdea3;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-origin: center;
+}
+
+/* Button hover effect */
+.pet-container .pet-button:hover {
+    background-color: #da7f45;
+    color: #dbdea3;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
   #main-content {
@@ -146,6 +154,7 @@ h2{
     position: absolute;
     top: 20px; /* Adjust vertical position */
     left: 10%; /* Center horizontally */
+    transform: translateX(-50%); /* Centering adjustment */
     z-index: 1000; /* Ensure it's on top of other content */
     color: #da7f45;
     font-size: 24px;
@@ -157,7 +166,12 @@ h2{
     cursor: pointer;
     background-color: #dbdea3;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-origin: center;
+}
+/* Reset button hover */
+#restart:hover {
+    background-color: #da7f45;
+    color: #dbdea3;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* "Clear" button style */
@@ -172,7 +186,15 @@ h2{
     cursor: pointer;
     background-color: #dbdea3;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-origin: center;
+
+}
+
+/* "Clear" button hover Effect */
+.clearbtn:hover {
+    background-color: #da7f45;
+    color: #dbdea3;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Story Containers (hidden initially) */
@@ -180,7 +202,8 @@ h2{
     color: white;
     font-family: "DynaPuff";
     border: 4px solid white;
-    padding: 10px;
+    padding-top: 40px;
+    height: 140px;
     background: rgb(71, 113, 237);
     display: none;
     margin: 10px;
@@ -199,15 +222,13 @@ h2{
     z-index: 10;
 }
 
-#playMusic, #stopMusic {
+#playMusic {
     color: #da7f45;
     font-size: 24px;
     font-family: "Chewy", Times, serif;
     border: 1px solid #dce0a0;
     border-radius: 5px;
-    /* padding: 10px; */
-    width: 60px;
-    height: 60px;
+    padding: 10px;
     text-align: center;
     cursor: pointer;
     background-color: #dbdea3;
@@ -215,8 +236,26 @@ h2{
     position: absolute; /* Absolute positioning for each button */
     top: 3%; /* Bottom spacing from the image */
     right: 5%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust button to be exactly centered */
     z-index: 10; /* Ensure it's on top of the image */
-    transform-origin: center;
+}
+
+#stopMusic {
+    color: #da7f45;
+    font-size: 24px;
+    font-family: "Chewy", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dbdea3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute; /* Absolute positioning for each button */
+    top: 3%; /* Bottom spacing from the image */
+    right: 5%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust button to be exactly centered */
+    z-index: 10; /* Ensure it's on top of the image */
 }
 
 #info-button {
@@ -232,17 +271,4 @@ h2{
    width: 50px;
    height: 50px;
 
-}
-
-/* Button hover effects */
-#playMusic:hover, 
-#stopMusic:hover, 
-#restart:hover, 
-.clearbtn:hover, 
-.pet-button:hover {
-    background-color: #da7f45;
-    color: #dbdea3;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1); /* Grow uniformly */
-    transform-origin: center; /* Ensure growth is centered */
 }

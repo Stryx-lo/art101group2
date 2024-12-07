@@ -89,11 +89,3 @@ $('#stopMusic').click( function(){
   $('#stopMusic').hide();
 
 });
-
-$('#restart').click(  function(){
-  console.log("music has been reset")
-
-  myAudio.pause();
-  $('#playMusic').show();
-  $('#stopMusic').hide();
-})
