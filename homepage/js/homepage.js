@@ -123,6 +123,50 @@ $('#restart').click(  function(){
   $('#stopMusic').hide();
 })
 
+// Event listern for go back button
+function AdoptedSticker1() {
+  const element = $("#adopted1"); // Use jQuery to select the element
+  element.hide(); // Initially hide the element
+
+  $("#adopt1").on("click", function () {
+    console.log("clicked");
+    element.show(); // Show the element when the button is clicked
+  });
+}
+
+$(document).ready(function () {
+  AdoptedSticker1();
+});
+
+function AdoptedSticker2() {
+  const element = $("#adopted2"); // Use jQuery to select the element
+  element.hide(); // Initially hide the element
+
+  $("#adopt2").on("click", function () {
+    console.log("clicked");
+    element.show(); // Show the element when the button is clicked
+  });
+}
+
+$(document).ready(function () {
+  AdoptedSticker2();
+});
+ 
+function AdoptedSticker3() {
+  const element = $("#adopted3"); // Use jQuery to select the element
+  element.hide(); // Initially hide the element
+
+  $("#adopt3").on("click", function () {
+    console.log("clicked");
+    element.show(); // Show the element when the button is clicked
+  });
+}
+
+$(document).ready(function () {
+  AdoptedSticker3();
+});
+ 
+
 // Cursor animation
 const cursorAnimation = $('#cursor-animation');
 let idleTimeout; // Stores the timeout ID
