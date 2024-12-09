@@ -255,17 +255,35 @@ body, html {
 
 
 /* adopt sticker*/
-.adopted-sticker {
+#adopted1 {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 50px;
+    bottom: 65%;
+    right: 67%;
+    width: 100px;
     height: 50px;
-    background: url('./homepage/img/adopted.jpg') no-repeat center center;
     background-size: contain;
     z-index: 10;
 }
 
+#adopted2 {
+    position: absolute;
+    bottom: 65%;
+    right: 35%;
+    width: 100px;
+    height: 50px;
+    background-size: contain;
+    z-index: 10;
+}
+
+#adopted3 {
+    position: absolute;
+    bottom: 65%;
+    right: 3%;
+    width: 100px;
+    height: 50px;
+    background-size: contain;
+    z-index: 10;
+}
 #playMusic, #stopMusic {
     color: #da7f45;
     font-size: 24px;
