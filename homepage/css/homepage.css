@@ -96,7 +96,6 @@ h2{
 
 .scroll-container::-webkit-scrollbar { /*good for visibility cross platforms*/
     display: none;
-
 }
 
 /* Each individual pet container */
@@ -281,7 +280,7 @@ body, html {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: absolute; /* Absolute positioning for each button */
     top: 3%; /* Bottom spacing from the image */
-    right: 5%; /* Center horizontally */
+    right: 10%; /* Center horizontally */
     z-index: 10; /* Ensure it's on top of the image */
     transform-origin: center;
 }
@@ -290,8 +289,8 @@ body, html {
 /*  */
 #info-button {
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 3%;
+    right: 5px;
     z-index: 1000;
     border: 1px solid #dce0a0;
     border-radius: 5px;
@@ -379,3 +378,25 @@ body, html {
     height: auto;
   }
 
+#walking-dog {
+    position: fixed;
+    bottom: 10%; /* Adjust to control vertical position */
+    left: -150px; /* Start off-screen on the left */
+    z-index: 2000; /* Ensure it's above all other elements */
+    animation: walkAcrossScreen 10s linear infinite; /* Adjust timing as needed */
+}
+
+#walking-dog img {
+    width: 100px; /* Adjust size of the dog */
+    height: auto;
+}
+
+/* Keyframes for walking animation */
+@keyframes walkAcrossScreen {
+    0% {
+        left: -150px; /* Start off-screen */
+    }
+    100% {
+        left: 100vw; /* Walk off-screen to the right */
+    }
+}
