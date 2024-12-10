@@ -108,6 +108,15 @@ $('#stopMusic').click( function(){
 $('#restart').click(  function(){
   console.log("music has been reset")
 
+  const element1 = $("#adopted1"); // Use jQuery to select the element
+  element1.hide(); // Initially hide the element
+  const element2 = $("#adopted2"); // Use jQuery to select the element
+  element2.hide(); // Initially hide the element
+  const element3 = $("#adopted3"); // Use jQuery to select the element
+  element3.hide(); // Initially hide the element
+
+
+
   myAudio.pause();
   $('#playMusic').show();
   $('#stopMusic').hide();
