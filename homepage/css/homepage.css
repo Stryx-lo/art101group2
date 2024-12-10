@@ -56,6 +56,12 @@ h2{
     text-align: center;
 }
 
+h3{
+    color: #da7f45;
+    font-family: "DynaPuff";
+    text-align: center;
+}
+
 /* Scroll container (moves horizontally) */
 .scroll-container {
     display: flex; /* Arrange each pet cotnainer in a row */
@@ -81,6 +87,12 @@ h2{
     display: inline-block; /* Keep images and buttons inline */
     margin: 10px; /* Space between containers */
     text-align: center; /* Center-align content inside each container */
+}
+
+.adopt-container {
+    position: relative; /* To position the button relative to the image */
+    
+    
 }
 
 /* Images inside pet containers */
@@ -121,7 +133,7 @@ h2{
 #restart {
     position: absolute;
     top: 20px; /* Adjust vertical position */
-    left: 10%; /* Center horizontally */
+    left: 5%; /* Center horizontally */
     z-index: 1000; /* Ensure it's on top of other content */
     color: #da7f45;
     font-size: 24px;
@@ -135,6 +147,21 @@ h2{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-origin: center;
 }
+
+/*get random dog and get random cat button style*/ 
+#getDogButton, #getCatButton {  
+    color: #da7f45;
+    font-size: 24px;
+    font-family: "Chewy", Times, serif;
+    border: 1px solid #dce0a0;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #dbdea3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
+} 
 
 /* "Clear" button style */
 .clearbtn {
@@ -153,11 +180,11 @@ h2{
 
 /* Story Containers (hidden initially) */
 #storyOne, #storyTwo, #storyThree {
-    color: white;
+    color: #feb06e;
     font-family: "DynaPuff";
     border: 4px solid white;
     padding: 10px;
-    background: rgb(71, 113, 237);
+    background: #fce3af;
     display: none;
     margin: 10px;
     border-radius: 5px;
@@ -178,8 +205,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    flex-direction: column;  /* Stack buttons and content vertically */
+    font-family: "DynaPuff", sans-serif;
+    flex-direction: column;  /* Stack buttons and content vertically */ 
 }
 
 .container {
@@ -191,7 +218,8 @@ body, html {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #feb06e; 
+    font-family: "DynaPuff";
     color: white;
     border: none;
     border-radius: 5px;
@@ -200,7 +228,7 @@ body, html {
 }
 
 .animateBtn:hover {
-    background-color: #45a049;
+    background-color: #fba24e;
 }
 
 /* Initially position the animated content off-screen to the right */
@@ -219,46 +247,49 @@ body, html {
 }
 
 .animated-image {
-    width: 100px;
-    height: 100px;
+    height: 300px;
     margin-right: 20px;
+    margin-left: 20px;
 }
 
 .animated-text {
     font-size: 18px;
-    color: #333;
 }
 
 
 /* adopt sticker*/
 #adopted1 {
-    position: absolute;
-    bottom: 65%;
-    right: 67%;
+    position: absolute; 
+    bottom: 85%;
+    left: 260px;
     width: 100px;
     height: 50px;
-    background-size: contain;
+
     z-index: 10;
+   
 }
 
 #adopted2 {
     position: absolute;
-    bottom: 55%;
-    right: 35%;
+    
+    bottom: 85%;
+    left: 630px;
     width: 100px;
     height: 50px;
-    background-size: contain;
+    
     z-index: 10;
+    
 }
 
 #adopted3 {
     position: absolute;
-    bottom: 65%;
-    right: 3%;
+    bottom: 85%;
+    left: 1000px;
     width: 100px;
     height: 50px;
-    background-size: contain;
+   
     z-index: 10;
+   
 }
 #playMusic, #stopMusic {
     color: #da7f45;
@@ -285,13 +316,13 @@ body, html {
 #info-button {
     position: absolute;
     top: 3%;
-    right: 5px;
+    right: 5%;
     z-index: 1000;
     border: 1px solid #dce0a0;
     border-radius: 5px;
     cursor: pointer;
-    width: 50px; 
-    height: 50px; 
+    width: 60px; 
+    height: 60px; 
 
 }
 
@@ -320,7 +351,7 @@ body, html {
     position: absolute;
     z-index: 1;
     top: 150%;
-    right: 10%;
+    right: 5%;
   }
 
   
@@ -403,3 +434,36 @@ body, html {
         left: 100vw; /* Walk off-screen to the right */
     }
 }
+
+/* story images styling */
+#apolloimg1 {
+    width: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.storyalign1 {
+    display: flex;
+    justify-content: space-between; /* Space out the items */
+    align-items: center; /* Vertically center the items */
+}
+
+#mollyid1 {
+    width: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#pigimg1 {
+    width: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+} 
+
+#dogInfo {
+    color:#da7f45
+}  
+
+#catInfo {
+    color:#da7f45
+} 

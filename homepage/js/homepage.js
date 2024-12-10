@@ -23,24 +23,6 @@ $('#shelter-image').click(function () {
 });
 
 
-  //Add adopted sticker if there's an adopted animal
-  const adoptedAnimalId = localStorage.getItem('adoptedAnimal');
-  
-  if (adoptedAnimalId) {
-    // Find the animal container using the ID stored in localStorage
-    const animalContainer = document.getElementById(adoptedAnimalId);
-   
-    if (animalContainer) {
-        // Create the "Adopted" sticker
-        const sticker = document.createElement('div');
-        sticker.classList.add('adopted-sticker');  // Add class instead of inline styles
-
-        // Add the sticker to the animal container
-        animalContainer.style.position = 'relative';  // Ensure the container has positioning
-        animalContainer.appendChild(sticker);
-    }
-  }
-
 
   $(document).ready(function () {
     $('.story').hide();
@@ -127,6 +109,14 @@ $('#stopMusic').click( function(){
 
 $('#restart').click(  function(){
   console.log("music has been reset")
+
+  //Hide sticker when restart button
+  const element1 = $("#adopted1"); // Use jQuery to select the element
+  element1.hide(); // Initially hide the element
+  const element2 = $("#adopted2"); // Use jQuery to select the element
+  element2.hide(); // Initially hide the element
+  const element3 = $("#adopted3"); // Use jQuery to select the element
+  element3.hide(); // Initially hide the element
 
   myAudio.pause();
   $('#playMusic').show();
