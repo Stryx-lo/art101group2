@@ -82,6 +82,12 @@ h2{
     text-align: center;
 }
 
+h3{
+    color: #da7f45;
+    font-family: "DynaPuff";
+    text-align: center;
+}
+
 /* Scroll container (moves horizontally) */
 .scroll-container {
     display: flex; /* Arrange each pet cotnainer in a row */
@@ -478,4 +484,12 @@ body, html {
     width: 500px;
     margin-left: 20px;
     margin-right: 20px;
-}
+} 
+
+#dogInfo {
+    color:#da7f45
+}  
+
+#catInfo {
+    color:#da7f45
+} 
