@@ -110,7 +110,7 @@ h2{
 }
 
 .adopt-container {
-    position: fixed; /* To position the button relative to the image */
+    position: relative; /* To position the button relative to the image */
     display: inline-block; /* Keep images and buttons inline */
 }
 
