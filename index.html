@@ -26,6 +26,9 @@
   <!-- Preloader -->
   <div id="preloader">
     <img src="./homepage/img/shelter.png">
+    <div id="walking-dog">
+      <img src="./homepage/img/dogwalking.gif" alt="Walking Dog">
+    </div>
     <div id="title-text">
       <p>Welcome to our <br> adoption center!</p>
     </div>
@@ -35,8 +38,9 @@
   </div>
 
   <!-- Main Content -->
-
-
+  <img id = "adopted1" src = "./homepage/img/adopted.jpg">
+  <img id = "adopted2" src = "./homepage/img/adopted.jpg">
+  <img id = "adopted3" src = "./homepage/img/adopted.jpg">
 <!-- Top Navbar -->
 <div class="topbar">
   <!-- Text -->
@@ -47,7 +51,23 @@
   <button id="playMusic">&#9835 &#9205</button>
   <button id="stopMusic">&#9835 &#9208</button>
   <button id="info-button" title="">
-      <img src="./homepage/img/infobutton.png" width="40" height="40">
+    <div class="popup">
+      <img src="./homepage/img/catinfobutton.png" width="40" height="40">
+      <span class="popuptext" id="infoBox"> <b> Team Two Project: <i>Rescue</i> </b> <br> 
+        <br> Our website tells the stories of rescued animals, with the goal being to encourage people to rescue and adopt more animals. All of the stories told on this website are real, either sourced from the stories of our own pets or the pets of our loved ones. 
+        <br> <br> ART101 Team Two consists of the following individuals:
+        <ul>
+          <li>Aurora Aguilar: CSS and Project Visual Design</li>
+          <li>Hilary Cervantes: Compiling and Writing Stories, Additional HTML </li>
+          <li>Alondra Hernandez Polanco: CSS and Project Visual Design</li>
+          <li>Kam Rem: Music Button, Story Scroller </li>
+          <li>Ahmee Smith: Story Scroller, Visual Design </li>
+          <li>Donovan Sayegh-McFann: Preloader Screen, Info Button, Additional HTML </li>
+          <li>Lucy Jordan: Preloader Screen, Debugging, Music Button, Additional Animations </li>
+        </ul>
+        <br> A big thank you to our TAs, to W3 Schools, to Wes Modes (and his digital simulacrum, WesBot), and visitors like you.
+        </span>
+    </div>
   </button>
 </div>
 
@@ -70,6 +90,18 @@
     <div class="pet-container">
       <img src="./homepage/img/cowpig.gif" alt="Cow and pig" class="pet-image">
       <button class="pet-button" id="storyThreeBtn">Learn More</button>
+    </div>
+
+    <!-- Container for Dog API -->
+    <div class="pet-container">
+      <img src="./homepage/img/cowpig.gif" alt="dogAPIImage" class="pet-image">
+      <button class="pet-button" id="dogAPIBtn">Learn More</button>
+    </div>
+
+    <!-- Container for Cat API -->
+    <div class="pet-container">
+      <img src="./homepage/img/cowpig.gif" alt="catAPIImage" class="pet-image">
+      <button class="pet-button" id="catAPIBtn">Learn More</button>
     </div>
   </div>
 
@@ -125,7 +157,7 @@
         <p class="animated-text">Placeholder text</p>
       </div>
     </div>
-    <button class="clearbtn">Clear</button>
+    <button id = "adopt1" class="clearbtn">Clear</button>
   </div>
 
   <!-- Molly's Story -->
@@ -158,7 +190,7 @@
 
       <!-- Paragraph 2 -->
       <div id="contentMolly2" class="animated-content">
-        <img src="./img/otter2.jpg" alt="Image 2" class="animated-image">
+        <img src="" alt="Image 2" class="animated-image">
         <p class="animated-text">As the days passed, Molly blossomed under Peggy’s care. She followed the dog
           everywhere, her once timid
           nature now replaced with confidence. One afternoon, Reece and Juliet found the two of them curled up
@@ -177,7 +209,7 @@
         <p class="animated-text">Content 3 slides from the right side too!</p>
       </div>
     </div>
-    <button class="clearbtn">Clear</button>
+    <button id = "adopt2"class="clearbtn">Clear</button>
   </div>
 
   <!-- Marley's Story -->
@@ -233,8 +265,42 @@
         <p class="animated-text">Content 3 slides from the right side too!</p>
       </div>
     </div>
-    <button class="clearbtn">Clear</button>
+    <button id="adopt3" class="clearbtn">Clear</button>
   </div>
 
+  <div id="randomDog" class="story">
+    <div class="container">
+      <h1>Random Dog Breed</h1>
+      <p>Do you want to adopt a dog but don't know what breed to look for? Here's a handy button that shows you a random
+        dog breed! Feel free to discover the various dog breeds from across the world. Keep in mind, different breeds have
+        different needs and required care, so do your research before you adopt!</p>
+      <button id="getDogButton">Get Random Dog</button>
+        <div id="dogInfo">
+        <img id="dogImage" class="apiImage" src="" alt="Press the button!" />
+        <p id="breedName"></p>
+        </div>
+      <button class="clearbtn">Close</button>
+     </div>
+  </div>
+
+  <div id="randomCat" class="story">
+    <div class="container">
+      <h1>Random Cat Breed</h1>
+      <p>Do you want to adopt a cat but don't know what breed to look for? Here's a handy button that shows you a random
+        cat breed! Feel free to discover the various cat breeds from across the world. Keep in mind, different breeds have
+        different needs and required care, so do your research before you adopt!</p>
+      <h2>Please allow a moment after clicking the button for the Image to load.</h2>
+      <button id="getCatButton">Get Random Cat</button>
+      <div id="catInfo">
+        <img id="catImage" class="apiImage" src="" alt="Press the button!" />
+        <p id="catBreed"></p>
+       </div>
+       <button class="clearbtn">Close</button>
+      </div>
+  </div>
+
+</div>
+
 </body>
+
 </html>
