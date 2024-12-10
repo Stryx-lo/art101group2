@@ -3,13 +3,14 @@ $(document).ready(function () {
   const openDoorImg = new Image();
   openDoorImg.src = './img/opendoors.png';
 
-  // Door hover effect
   $('#door-image').hover(
     function () {
+      // When hovering over the door image, show the open door
       $(this).attr('src', './img/opendoors.png');
     },
     function () {
-      $(this).attr('src', './img/opendoors.png');
+      // When not hovering over the door image, show the shelter image
+      $(this).attr('src', './img/closeddoors.png');
     }
   );
 
@@ -97,3 +98,46 @@ $('#restart').click(  function(){
   $('#playMusic').show();
   $('#stopMusic').hide();
 })
+
+// Cursor animation
+const cursorAnimation = $('#cursor-animation');
+let idleTimeout; // Stores the timeout ID
+const idleDelay = 1000; // 1-second delay for idle detection
+
+// Function to reset and play the animation
+function playCursorAnimation(x, y) {
+  // Force reset the GIF by appending a unique query string
+  const gifSrc = cursorAnimation.data('src'); // Original GIF src stored in data attribute
+  cursorAnimation.attr('src', `${gifSrc}?t=${Date.now()}`); // Append a unique timestamp
+
+
+
+  // Set position and show the animation
+  cursorAnimation.css({
+    left: x + 'px',
+    top: y + 'px',
+    display: 'block',
+  });
+
+  // Hide the animation after it finishes (match this to your GIF duration)
+  setTimeout(() => {
+    cursorAnimation.hide();
+  }, 2900); // Match this to the duration of your GIF
+}
+
+// Mousemove event handler
+$(document).on('mousemove.cursorAnimation', function (e) {
+  // Clear any previous timeout
+  clearTimeout(idleTimeout);
+
+  // Hide the animation immediately when the mouse moves
+  cursorAnimation.hide();
+
+  // Set a new timeout to show the animation after being idle
+  idleTimeout = setTimeout(() => {
+    playCursorAnimation(e.pageX, e.pageY);
+  }, idleDelay);
+});
+
+// Store the original GIF src in a data attribute for resetting purposes
+cursorAnimation.data('src', cursorAnimation.attr('src'));
