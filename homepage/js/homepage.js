@@ -21,24 +21,6 @@ $(document).ready(function () {
     });
   });
 
-  //Add adopted sticker if there's an adopted animal
-  const adoptedAnimalId = localStorage.getItem('adoptedAnimal');
-  
-  if (adoptedAnimalId) {
-    // Find the animal container using the ID stored in localStorage
-    const animalContainer = document.getElementById(adoptedAnimalId);
-   
-    if (animalContainer) {
-        // Create the "Adopted" sticker
-        const sticker = document.createElement('div');
-        sticker.classList.add('adopted-sticker');  // Add class instead of inline styles
-
-        // Add the sticker to the animal container
-        animalContainer.style.position = 'relative';  // Ensure the container has positioning
-        animalContainer.appendChild(sticker);
-    }
-  }
-
 
   $(document).ready(function () {
     $('.story').hide();
