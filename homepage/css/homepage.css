@@ -281,7 +281,7 @@ body, html {
 #adopted1 {
     position: absolute; 
     bottom: 85%;
-    left: 140px;
+    left: 10px;
     width: 100px;
     height: 50px;
 
@@ -293,7 +293,7 @@ body, html {
     position: absolute;
     
     bottom: 85%;
-    left: 385px;
+    left: 380px;
     width: 100px;
     height: 50px;
     
@@ -304,7 +304,7 @@ body, html {
 #adopted3 {
     position: absolute;
     bottom: 85%;
-    left: 635px;
+    left: 1000px;
     width: 100px;
     height: 50px;
    
