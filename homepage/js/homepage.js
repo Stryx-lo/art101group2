@@ -3,13 +3,14 @@ $(document).ready(function () {
   const openDoorImg = new Image();
   openDoorImg.src = './homepage/img/opendoors.png';
 
-  // Door hover effect
   $('#door-image').hover(
     function () {
+      // When hovering over the door image, show the open door
       $(this).attr('src', './homepage/img/opendoors.png');
     },
     function () {
-      $(this).attr('src', './homepage/img/opendoors.png');
+      // When not hovering over the door image, show the shelter image
+      $(this).attr('src', './homepage/img/closeddoors.png');
     }
   );
 
@@ -74,6 +75,14 @@ $('#restart').click(function() {
 });
 });
 
+//info button - when the user clicks on the button, opens the popup
+  $('#info-button').click(function () {
+    console.log("InfoBox is activated!");
+    $("#infoBox").toggleClass("show");
+
+  });
+
+
 // Code for animated story "next" buttons
 $(document).ready(function() {
   // When any button with the class 'animateBtn' is clicked
@@ -122,56 +131,81 @@ $('#restart').click(  function(){
   $('#stopMusic').hide();
 })
 
-/* CURSOR ANIMATION */
+// Event listern for go back button
+function AdoptedSticker1() {
+  const element = $("#adopted1"); // Use jQuery to select the element
+  element.hide(); // Initially hide the element
 
+  $("#adopt1").on("click", function () {
+    console.log("clicked");
+    element.show(); // Show the element when the button is clicked
+  });
+}
+
+$(document).ready(function () {
+  AdoptedSticker1();
+});
+
+function AdoptedSticker2() {
+  const element = $("#adopted2"); // Use jQuery to select the element
+  element.hide(); // Initially hide the element
+
+  $("#adopt2").on("click", function () {
+    console.log("clicked");
+    element.show(); // Show the element when the button is clicked
+  });
+}
+
+$(document).ready(function () {
+  AdoptedSticker2();
+});
+ 
+function AdoptedSticker3() {
+  const element = $("#adopted3"); // Use jQuery to select the element
+  element.hide(); // Initially hide the element
+
+  $("#adopt3").on("click", function () {
+    console.log("clicked");
+    element.show(); // Show the element when the button is clicked
+  });
+}
+
+$(document).ready(function () {
+  AdoptedSticker3();
+});
+ 
+
+// Cursor animation
 const cursorAnimation = $('#cursor-animation');
-    let mouseTimeout, animationTimeout, currentStep = 0;
+let idleTimeout; // Stores the timeout ID
+const idleDelay = 1000; // 1-second delay for idle detection
 
-    // Paw images
-    const pawImages = [
-        './homepage/img/paw1.png',
-        './homepage/img/paw2.png',
-        './homepage/img/paw3.png',
-        './img/homepage/paw4.png',
-        './img/homepage/paw5.png',
-    ];
+// Function to reset and play the animation
+function playCursorAnimation(x, y) {
+  // Force reset the GIF by appending a unique query string
+  const gifSrc = cursorAnimation.data('src'); // Original GIF src stored in data attribute
+  cursorAnimation.attr('src', `${gifSrc}?t=${Date.now()}`); // Append a unique timestamp
 
-    const animationSequence = () => {
-        if (currentStep < pawImages.length) {
-            // Show paw images one by one
-            cursorAnimation.css({
-                'background-image': `url(${pawImages[currentStep]})`,
-                display: 'block'
-            });
-            currentStep++;
-        } else if (currentStep >= pawImages.length && currentStep < 2 * pawImages.length - 1) {
-            // Reverse sequence
-            cursorAnimation.css({
-                'background-image': `url(${pawImages[2 * pawImages.length - 2 - currentStep]})`
-            });
-            currentStep++;
-        } else {
-            // End animation
-            cursorAnimation.css({ display: 'none' });
-            currentStep = 0; // Reset for next hover
-            clearTimeout(animationTimeout);
-            return;
-        }
+  // Set position and show the animation
+  cursorAnimation.css({
+    left: x + 'px',
+    top: y + 'px',
+    display: 'block',
+  });
 
-        // Set timeout for next image
-        animationTimeout = setTimeout(animationSequence, 200); // Adjust timing as needed
-    };
+  // Hide the animation after it finishes (match this to your GIF duration)
+  setTimeout(() => {
+    cursorAnimation.hide();
+  }, 2900); // Match this to the duration of your GIF
+}
 
-    $(document).mousemove(function (e) {
-        // Position the cursor animation at the mouse location
-        cursorAnimation.css({
-            top: e.pageY - 25, // Adjust to center the image
-            left: e.pageX - 25
-        });
+// Mousemove event handler
+$(document).on('mousemove.cursorAnimation', function (e) {
+  // Clear any previous timeout
+  clearTimeout(idleTimeout);
 
-        // Clear previous timeouts if the mouse is moving
-        clearTimeout(mouseTimeout);
-        clearTimeout(animationTimeout);
+  // Hide the animation immediately when the mouse moves
+  cursorAnimation.hide();
 
         // Start the animation after 1 second of no movement
         mouseTimeout = setTimeout(() => {
@@ -247,3 +281,11 @@ $(document).ready(function() {
       getRandomCat();
   });
 });
+  // Set a new timeout to show the animation after being idle
+  idleTimeout = setTimeout(() => {
+    playCursorAnimation(e.pageX, e.pageY);
+  }, idleDelay);
+
+
+// Store the original GIF src in a data attribute for resetting purposes
+cursorAnimation.data('src', cursorAnimation.attr('src'));
