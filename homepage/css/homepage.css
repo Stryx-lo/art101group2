@@ -246,14 +246,13 @@ body, html {
 }
 
 .animated-image {
-    width: 100px;
-    height: 100px;
+    height: 300px;
     margin-right: 20px;
+    margin-left: 20px;
 }
 
 .animated-text {
     font-size: 18px;
-    color: #333;
 }
 
 
@@ -429,4 +428,29 @@ body, html {
     100% {
         left: 100vw; /* Walk off-screen to the right */
     }
+}
+
+/* story images styling */
+#apolloimg1 {
+    width: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.storyalign1 {
+    display: flex;
+    justify-content: space-between; /* Space out the items */
+    align-items: center; /* Vertically center the items */
+}
+
+#mollyid1 {
+    width: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#pigimg1 {
+    width: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
