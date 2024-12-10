@@ -111,7 +111,8 @@ h2{
 
 .adopt-container {
     position: relative; /* To position the button relative to the image */
-    display: inline-block; /* Keep images and buttons inline */
+    
+    
 }
 
 /* Images inside pet containers */
@@ -263,22 +264,21 @@ body, html {
 
 /* adopt sticker*/
 #adopted1 {
-    position: absolute;
-    display: block;
-    bottom: 57%;
-    right: 80%;
+    position: absolute; 
+    bottom: 85%;
+    left: 140px;
     width: 100px;
     height: 50px;
- 
+
     z-index: 10;
    
 }
 
 #adopted2 {
     position: absolute;
-    display: block;
-    bottom: 57%;
-    right: 60%;
+    
+    bottom: 85%;
+    left: 385px;
     width: 100px;
     height: 50px;
     
@@ -288,14 +288,13 @@ body, html {
 
 #adopted3 {
     position: absolute;
-  display: block;
-    bottom: 57%;
-    right: 41%;
+    bottom: 85%;
+    left: 635px;
     width: 100px;
     height: 50px;
-    cursor: pointer;
+   
     z-index: 10;
-    transform-origin: center;
+   
 }
 #playMusic, #stopMusic {
     color: #da7f45;
