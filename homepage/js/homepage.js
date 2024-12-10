@@ -1,25 +1,27 @@
 $(document).ready(function () {
-  // Preload the open door image
-  const openDoorImg = new Image();
-  openDoorImg.src = './homepage/img/opendoors.png';
+  
+// Preload the open door image
+const openDoorImg = new Image();
+openDoorImg.src = './homepage/img/opendoors.png';
 
-  $('#door-image').hover(
-    function () {
-      // When hovering over the door image, show the open door
-      $(this).attr('src', './homepage/img/opendoors.png');
-    },
-    function () {
-      // When not hovering over the door image, show the shelter image
-      $(this).attr('src', './homepage/img/closeddoors.png');
-    }
-  );
+$('#shelter-image').hover(
+  function () {
+    // When hovering over the door image, show the open door
+    $(this).attr('src', './homepage/img/opendoors.png');
+  },
+  function () {
+    // When not hovering over the door image, show the shelter image
+    $(this).attr('src', './homepage/img/closeddoors.png');
+  }
+);
 
-  // Preloader fade-out
-  $('#door-image').click(function () {
-    $('#preloader').fadeOut('slow', function () {
-      $('.scroll-container').fadeIn('slow');
-    });
+// Preloader fade-out
+$('#shelter-image').click(function () {
+  $('#preloader').fadeOut('slow', function () {
+    $('.scroll-container').fadeIn('slow');
   });
+});
+
 
   //Add adopted sticker if there's an adopted animal
   const adoptedAnimalId = localStorage.getItem('adoptedAnimal');

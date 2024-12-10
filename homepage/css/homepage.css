@@ -1,66 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
 
-/* Preloader Container, so, background image, text and doors that will all disappear */
+/* Preloader Container */
 #preloader {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* Ensures full width */
-    height: 100vh;/* Full height of the viewport */
-    z-index: 9998; /* Ensures it is above other content */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    z-index: 9998; /* Stack above other elements */
     overflow: hidden; /* Prevents scrolling */
+    background-image: url('../img/background.png'); /* Background behind the image */
+    display: flex; /* Use flexbox for easy centering */
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
 }
 
-/* Title Text Inside Preloader */
-#title-text {
+/* Preloader Image */
+#preloader > img {
     position: absolute;
-    color: #e5e4e4;
-    top: 10%; /* Adjust positioning */
-    justify-content: center;
-    font-family: "Chewy", "Comic Sans", cursive;
-    font-size: 100px;
-    font-weight: bolder;
-    text-align: center;
-    width: 100%; /* Center the text */
-}
-
-/* Door conrainter, aka both open and closed doors */
-#door-container {
-    display: flex;
-    justify-content: center; /* Horizontally centers the door */
-    position: absolute; /* Allows precise positioning */
-    top: 75%; /* Moves the door 3/4 down the viewport */
-    left: 50%; /* Horizontally aligns the door to the center */
-    transform: translate(-50%, -50%); /* Ensures the door stays centered */
-    width: 100%; /* Ensures the container spans full width */
-}
-
-/* Door Image inside Preloader, actual image properties */
-#door-image {
-    display: block;
-    width: 335px; /* Fixed width */
-    height: 225px; /* Fixed height */
-    object-fit: contain; /* Ensures proper scaling */
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
-    transform-origin: center; /* Ensures scaling is centered */
-}
-
-/* background/shelter image */
-#preloader img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 15%; /* 15% gap from the bottom */
+    left: 50%; /* Horizontally center the image */
+    transform: translateX(-50%); /* Adjust for horizontal centering */
+    height: calc(100vh - 20%); /* Height adjusts to fit the gap, maintaining aspect ratio */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image doesn't stretch */
+    z-index: 1; /* Ensure it's behind other elements */
 }
 
 /* Body Styling */
 body {
-    margin: 0; /* removes te default margins */
+    margin: 0; /* Remove default margins */
     min-height: 100%; /* Full height of the viewport */
     background-color: #9CDCFE;
 }
+
     
 /* Heading text */
 h1 {
