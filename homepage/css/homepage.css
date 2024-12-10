@@ -183,7 +183,7 @@ h2{
     font-family: "DynaPuff";
     border: 4px solid white;
     padding: 10px;
-    background: rgb(71, 113, 237);
+    background: #fce3af;
     display: none;
     margin: 10px;
     border-radius: 5px;
@@ -204,8 +204,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    flex-direction: column;  /* Stack buttons and content vertically */
+    font-family: "DynaPuff", sans-serif;
+    flex-direction: column;  /* Stack buttons and content vertically */ 
 }
 
 .container {
@@ -217,7 +217,8 @@ body, html {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #feb06e; 
+    font-family: "DynaPuff";
     color: white;
     border: none;
     border-radius: 5px;
@@ -226,7 +227,7 @@ body, html {
 }
 
 .animateBtn:hover {
-    background-color: #45a049;
+    background-color: #fba24e;
 }
 
 /* Initially position the animated content off-screen to the right */
