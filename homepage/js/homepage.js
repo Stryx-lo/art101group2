@@ -44,7 +44,7 @@ window.scrollTo(0, 0);  // Scroll to the top of the page
   $('#catAPIBtn').click(() => showStory('#randomCat'));
 
   // Clear button handler
-  $('.clearbtn').click(() => $('.story').hide());
+  $('.adoptbtn').click(() => $('.story').hide());
 
 // Restart button (reset the page)
 $('#restart').click(function() {
@@ -77,8 +77,8 @@ $(document).ready(function() {
       // Add the 'show' class to the target content to trigger the animation
       $(targetContent).addClass('show');
       
-      // Optionally, hide the clicked button with a smooth fade-out effect
-      $(this).fadeOut(500);  // Adjust 500 to change the speed of the fade-out
+      // hide the clicked button with a  fade out effect
+      $(this).fadeOut(500);
   });
 });
 
@@ -178,6 +178,8 @@ function playCursorAnimation(x, y) {
   const gifSrc = cursorAnimation.data('src'); // Original GIF src stored in data attribute
   cursorAnimation.attr('src', `${gifSrc}?t=${Date.now()}`); // Append a unique timestamp
 
+
+
   // Set position and show the animation
   cursorAnimation.css({
     left: x + 'px',
@@ -199,11 +201,14 @@ $(document).on('mousemove.cursorAnimation', function (e) {
   // Hide the animation immediately when the mouse moves
   cursorAnimation.hide();
 
-        // Start the animation after 1 second of no movement
-        mouseTimeout = setTimeout(() => {
-            animationSequence();
-        }, 1000);
-    });
+  // Set a new timeout to show the animation after being idle
+  idleTimeout = setTimeout(() => {
+    playCursorAnimation(e.pageX, e.pageY);
+  }, idleDelay);
+});
+
+// Store the original GIF src in a data attribute for resetting purposes
+cursorAnimation.data('src', cursorAnimation.attr('src'));
 
 /* API CODE */
 // Code for dog API

@@ -163,8 +163,8 @@ h3{
     transform-origin: center;
 } 
 
-/* "Clear" button style */
-.clearbtn {
+/* "Adopt!" button style */
+.adoptbtn {
     color: #da7f45;
     font-size: 24px;
     font-family: "Chewy", Times, serif;
@@ -383,7 +383,7 @@ body, html {
 #playMusic:hover, 
 #stopMusic:hover, 
 #restart:hover, 
-.clearbtn:hover, 
+.adoptbtn:hover, 
 .pet-button:hover {
     background-color: #da7f45;
     color: #dbdea3;
